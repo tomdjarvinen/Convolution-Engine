@@ -1,0 +1,230 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 14004
+
+Current time: 	2/8/17 2:00:23 PM CST
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 1
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	sxm140630
+User home directory: C:/Users/sxm140630
+User working directory: H:/Desktop/SeniorDesign/MemoryManagement
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/sxm140630/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/sxm140630/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	122 MB
+GUI max memory:		3,066 MB
+Engine allocated memory: 377 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bL:g (cv:JFrame):  Open Project : addNotify
+// Opening Vivado Project: H:\Desktop\SeniorDesign\MemoryManagement\MemoryManagement.xpr. Version: Vivado v2016.2 
+// Tcl Message: open_project H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.xpr 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// [GUI Memory]: 37 MB (+36672kb) [00:00:08]
+// [Engine Memory]: 376 MB (+243001kb) [00:00:08]
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 383 MB. GUI used memory: 30 MB. Current time: 2/8/17 2:00:25 PM CST
+// [Engine Memory]: 405 MB (+10507kb) [00:00:13]
+// TclEventType: IP_LOCK_CHANGE
+// [Engine Memory]: 441 MB (+16604kb) [00:00:18]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 64 MB (+25868kb) [00:00:22]
+// [Engine Memory]: 488 MB (+25590kb) [00:00:22]
+// Tcl Message: open_project H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 490 MB. GUI used memory: 32 MB. Current time: 2/8/17 2:00:41 PM CST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: MemoryManagement; location: H:/Desktop/SeniorDesign/MemoryManagement; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:31 . Memory (MB): peak = 553.074 ; gain = 123.570 
+// [Engine Memory]: 515 MB (+3254kb) [00:00:40]
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// [GUI Memory]: 73 MB (+6514kb) [00:00:41]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (MemBlock.bd) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MemBlock (MemBlock.bd)]", 1, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MemBlock (MemBlock.bd)]", 1, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// bL:g (cv:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd} 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, bL:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 536 MB. GUI used memory: 35 MB. Current time: 2/8/17 2:01:01 PM CST
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// [Engine Memory]: 574 MB (+34391kb) [00:00:52]
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M 
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// Tcl Message: Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 668 MB (+68257kb) [00:01:01]
+// [GUI Memory]: 80 MB (+2873kb) [00:01:01]
+// [GUI Memory]: 85 MB (+1443kb) [00:01:02]
+// PAPropertyPanels.initPanels (MemBlock.bd) elapsed time: 0.3s
+// Tcl Message: Successfully read diagram <MemBlock> from BD file <H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd> 
+// TclEventType: RSB_CONNECTION_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 692 MB. GUI used memory: 63 MB. Current time: 2/8/17 2:01:28 PM CST
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 730.813 ; gain = 152.695 
+// Elapsed time: 33 seconds
+dismissDialog("Open Block Design"); // bL:g (cv:JFrame)
+// [GUI Memory]: 90 MB (+137kb) [00:01:24]
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// Elapsed time: 101 seconds
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+// Elapsed time: 96 seconds
+selectCheckBox((HResource) null, "Enable Control / Status Stream", false); // h:JCheckBox (m:G, p:g): FALSE
+selectCheckBox((HResource) null, "Enable Control / Status Stream", true); // h:JCheckBox (m:G, p:g): TRUE
+// [GUI Memory]: 97 MB (+2669kb) [00:06:13]
+// Elapsed time: 95 seconds
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// [Engine Memory]: 704 MB (+3042kb) [00:08:39]
+// Elapsed time: 152 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream to Video Out", 12, "AXI4-Stream to Video Out", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream to Video Out", 12); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream to Video Out", 12, "AXI4-Stream to Video Out", 0, false, false, false, false, false, true); // O:as (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// bL:g (cv:JFrame):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+// Elapsed time: 53 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // y:JideButton (CommandBar:DockableBar, p:g)
+// Elapsed time: 33 seconds
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER, "Video Format (C_S_AXIS_VIDEO_FORMAT)"); // s:JideToggleButton (JPanel:JComponent, p:g): TRUE
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "Video Format (C_S_AXIS_VIDEO_FORMAT)"); // s:JideToggleButton (JPanel:JComponent, p:g): FALSE
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER, "AXI4S Video Input Component Width (C_S_AXIS_VIDEO_DATA_WIDTH)"); // s:JideToggleButton (JPanel:JComponent, p:g): TRUE
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "AXI4S Video Input Component Width (C_S_AXIS_VIDEO_DATA_WIDTH)"); // s:JideToggleButton (JPanel:JComponent, p:g): FALSE
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // y:JideButton (CommandBar:DockableBar, p:g)
+selectMenuItem(PAResourceCommand.PACommandNames_SHOW_PRODUCT_GUIDE, "Product Guide"); // af:JMenuItem (am:JPopupMenu, p:g)
+// Run Command: PAResourceCommand.PACommandNames_SHOW_PRODUCT_GUIDE
+// Elapsed time: 230 seconds
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 725 MB. GUI used memory: 49 MB. Current time: 2/8/17 2:24:01 PM CST
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells v_axi4s_vid_out_0] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 626 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream reg"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream reg"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+// bL:g (cv:JFrame):  Add IP : addNotify
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// Elapsed time: 15 seconds
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectButton(PAResourceEtoH.HACGCTextField_VALUE_OF_SPECIFIED_PARAMETER, "TDATA Width (bytes) (TDATA_NUM_BYTES)"); // s:JideToggleButton (F:JPanel, p:g): TRUE
+setText("TDATA Width (bytes)", "4"); // O:ao (aU:N, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+// Tcl Command: 'set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_register_slice_0]'
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_register_slice_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// bL:g (p:g):  Customize IP : addNotify
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Command: 'set_property -dict [list CONFIG.TDATA_NUM_BYTES {4}] [get_bd_cells axis_register_slice_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.TDATA_NUM_BYTES {4}] [get_bd_cells axis_register_slice_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+dismissDialog("Customize IP"); // bL:g (p:g)
+// PAPropertyPanels.initPanels (s_axis_tvalid) elapsed time: 0.3s
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// Elapsed time: 747 seconds
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// [Engine Memory]: 739 MB (+303kb) [00:38:22]
+// [GUI Memory]: 102 MB (+1039kb) [00:39:38]
+// HMemoryUtils.trashcanNow. Engine heap size: 739 MB. GUI used memory: 47 MB. Current time: 2/8/17 2:54:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 739 MB. GUI used memory: 47 MB. Current time: 2/8/17 3:24:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 739 MB. GUI used memory: 47 MB. Current time: 2/8/17 3:54:06 PM CST

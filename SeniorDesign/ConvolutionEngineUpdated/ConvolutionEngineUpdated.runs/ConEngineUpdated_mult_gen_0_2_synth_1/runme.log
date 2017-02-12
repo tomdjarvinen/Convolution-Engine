@@ -1,0 +1,41 @@
+
+*** Running vivado
+    with args -log ConEngineUpdated_mult_gen_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ConEngineUpdated_mult_gen_0_2.tcl
+
+
+****** Vivado v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source ConEngineUpdated_mult_gen_0_2.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:29 . Memory (MB): peak = 290.094 ; gain = 80.602
+INFO: [Synth 8-638] synthesizing module 'ConEngineUpdated_mult_gen_0_2' [c:/Users/saina/ConvolutionEngineUpdated/ConvolutionEngineUpdated.srcs/sources_1/bd/ConEngineUpdated/ip/ConEngineUpdated_mult_gen_0_2/synth/ConEngineUpdated_mult_gen_0_2.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'ConEngineUpdated_mult_gen_0_2' (6#1) [c:/Users/saina/ConvolutionEngineUpdated/ConvolutionEngineUpdated.srcs/sources_1/bd/ConEngineUpdated/ip/ConEngineUpdated_mult_gen_0_2/synth/ConEngineUpdated_mult_gen_0_2.vhd:68]
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 339.109 ; gain = 129.617
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:36 . Memory (MB): peak = 339.109 ; gain = 129.617
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.466 . Memory (MB): peak = 648.129 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:01:04 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:01:04 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:01:05 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:01:05 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:01:06 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:31 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:31 . Memory (MB): peak = 648.129 ; gain = 438.637
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:31 . Memory (MB): peak = 651.996 ; gain = 442.504
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |DSP48E1 |     1|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:32 . Memory (MB): peak = 651.996 ; gain = 442.504
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:21 . Memory (MB): peak = 661.453 ; gain = 446.719

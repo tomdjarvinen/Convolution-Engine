@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Thu Feb 09 14:38:11 2017
+# Process ID: 7880
+# Current directory: H:/Desktop/SeniorDesign/MemoryManagement
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7684 H:\Desktop\SeniorDesign\MemoryManagement\MemoryManagement.xpr
+# Log file: H:/Desktop/SeniorDesign/MemoryManagement/vivado.log
+# Journal file: H:/Desktop/SeniorDesign/MemoryManagement\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 560.852 ; gain = 130.996
+update_compile_order -fileset sources_1
+open_bd_design {H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_0/M_AXIS_MM2S. Setting parameter on /axi_dma_0/M_AXIS_MM2S failed
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_0/M_AXIS_CNTRL. Setting parameter on /axi_dma_0/M_AXIS_CNTRL failed
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Successfully read diagram <MemBlock> from BD file <H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd>
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 732.098 ; gain = 154.941
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.1 axi_fifo_mm_s_0
+endgroup
+set_property location {1 286 -212} [get_bd_cells axi_fifo_mm_s_0]
+delete_bd_objs [get_bd_cells axi_fifo_mm_s_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 fifo_generator_0
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /fifo_generator_0Executing the post_config_ip from bd
+endgroup
+startgroup
+set_property -dict [list CONFIG.INTERFACE_TYPE {AXI_STREAM} CONFIG.TDATA_NUM_BYTES {4} CONFIG.Input_Depth_axis {2048} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.TSTRB_WIDTH {4} CONFIG.TKEEP_WIDTH {4} CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_wach {15} CONFIG.Empty_Threshold_Assert_Value_wach {14} CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_wrch {15} CONFIG.Empty_Threshold_Assert_Value_wrch {14} CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_rach {15} CONFIG.Empty_Threshold_Assert_Value_rach {14} CONFIG.Full_Threshold_Assert_Value_axis {2047} CONFIG.Empty_Threshold_Assert_Value_axis {2046}] [get_bd_cells fifo_generator_0]
+INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /fifo_generator_0Executing the post_config_ip from bd
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins fifo_generator_0/S_AXIS]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0
+endgroup
+set_property location {3 639 -215} [get_bd_cells axis_register_slice_0]
+set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_register_slice_0]
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {4}] [get_bd_cells axis_register_slice_0]
+set_property location {2 643 -224} [get_bd_cells axis_register_slice_0]
+connect_bd_intf_net [get_bd_intf_pins fifo_generator_0/M_AXIS] [get_bd_intf_pins axis_register_slice_0/S_AXIS]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:c_addsub:12.0 c_addsub_0
+endgroup
+set_property location {4 827 -229} [get_bd_cells c_addsub_0]
+startgroup
+set_property -dict [list CONFIG.A_Width.VALUE_SRC USER CONFIG.A_Type.VALUE_SRC USER CONFIG.B_Width.VALUE_SRC USER CONFIG.B_Type.VALUE_SRC USER] [get_bd_cells c_addsub_0]
+set_property -dict [list CONFIG.A_Type {Unsigned} CONFIG.B_Type {Unsigned} CONFIG.A_Width {24} CONFIG.B_Width {24} CONFIG.Latency {0} CONFIG.B_Constant {true} CONFIG.CE {false} CONFIG.Bypass {true} CONFIG.Out_Width {24} CONFIG.B_Value {000000000000000000000000}] [get_bd_cells c_addsub_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:rs_decoder:9.0 rs_decoder_0
+WARNING: [IP_Flow 19-2162] IP 'MemBlock_rs_decoder_0_0' is locked:
+* IP 'MemBlock_rs_decoder_0_0' requires one or more mandatory licenses but no valid licenses were found. However license checkpoints may prevent use of this IP in some tool flows.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+endgroup
+delete_bd_objs [get_bd_cells rs_decoder_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_0
+endgroup
+set_property location {1 59 16} [get_bd_cells axis_broadcaster_0]
+connect_bd_intf_net [get_bd_intf_pins axis_register_slice_0/M_AXIS] [get_bd_intf_pins axis_broadcaster_0/S_AXIS]
+startgroup
+set_property -dict [list CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_broadcaster_0]
+set_property -dict [list CONFIG.NUM_MI {3} CONFIG.S_TDATA_NUM_BYTES {3} CONFIG.M01_TDATA_REMAP {tdata[15:8]} CONFIG.M02_TDATA_REMAP {tdata[23:16]} CONFIG.M03_TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_broadcaster_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0
+endgroup
+set_property location {3 588 58} [get_bd_cells mult_gen_0]
+startgroup
+set_property -dict [list CONFIG.PortBWidth.VALUE_SRC USER CONFIG.PortAWidth.VALUE_SRC USER CONFIG.PortAType.VALUE_SRC PROPAGATED] [get_bd_cells mult_gen_0]
+set_property -dict [list CONFIG.PortAWidth {8} CONFIG.PortBWidth {8} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OutputWidthHigh {15}] [get_bd_cells mult_gen_0]
+endgroup
+set_property location {2 673 31} [get_bd_cells mult_gen_0]
+connect_bd_net [get_bd_pins axis_broadcaster_0/m_axis_tdata] [get_bd_pins mult_gen_0/A]
+WARNING: [BD 41-1306] The connection to interface pin /axis_broadcaster_0/m_axis_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {3 442 147} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins axis_broadcaster_0/m_axis_tready]
+WARNING: [BD 41-1306] The connection to interface pin /axis_broadcaster_0/m_axis_tready is being overridden by the user. This pin will not be connected as a part of interface connection M00_AXIS
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {3}] [get_bd_cells xlconstant_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {7}] [get_bd_cells xlconstant_0]
+endgroup
+save_bd_design
+Wrote  : <H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd> 

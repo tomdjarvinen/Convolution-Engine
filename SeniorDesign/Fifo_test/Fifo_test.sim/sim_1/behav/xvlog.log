@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Fifo_test/Fifo_test.srcs/sources_1/new/Fifo_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Fifo_test/Fifo_test.srcs/sim_1/new/Fifo_test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Fifo_test_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Fifo_test/Fifo_test.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
