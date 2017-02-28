@@ -1,0 +1,351 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Feb 19 12:50:28 2017
+# Process ID: 14464
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14008 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/saina/Desktop/Top_Module' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 761.035 ; gain = 123.332
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+INFO: [HDL 9-2216] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v" into library work [C:/Users/saina/Desktop/SeniorDesign/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:1]
+[Sun Feb 19 12:51:48 2017] Launched synth_1...
+Run output will be captured here: C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Sun Feb 19 12:52:25 2017] Launched impl_1...
+Run output will be captured here: C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.runs/impl_1/runme.log
+launch_simulation -mode post-implementation -type timing
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2016.3
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.328 . Memory (MB): peak = 1001.582 ; gain = 3.461
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.328 . Memory (MB): peak = 1001.582 ; gain = 3.461
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1105.570 ; gain = 322.664
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.v"
+write_verilog: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 1214.777 ; gain = 109.207
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.v
+INFO: [SIM-utils-37] SDF generated:C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.sdf
+INFO: [USF-XSim-37] Inspecting design source files for 'FifoTesting_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing'
+"xvlog -m64 --relax -prj FifoTesting_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FifoTesting
+INFO: [VRFC 10-311] analyzing module FifoTesting_48
+INFO: [VRFC 10-311] analyzing module FifoTesting_49
+INFO: [VRFC 10-311] analyzing module FifoTesting_50
+INFO: [VRFC 10-311] analyzing module FifoTesting_51
+INFO: [VRFC 10-311] analyzing module FifoTesting_52
+INFO: [VRFC 10-311] analyzing module FifoTesting_53
+INFO: [VRFC 10-311] analyzing module Reg
+INFO: [VRFC 10-311] analyzing module Reg_0
+INFO: [VRFC 10-311] analyzing module Reg_1
+INFO: [VRFC 10-311] analyzing module Reg_10
+INFO: [VRFC 10-311] analyzing module Reg_11
+INFO: [VRFC 10-311] analyzing module Reg_12
+INFO: [VRFC 10-311] analyzing module Reg_13
+INFO: [VRFC 10-311] analyzing module Reg_14
+INFO: [VRFC 10-311] analyzing module Reg_15
+INFO: [VRFC 10-311] analyzing module Reg_16
+INFO: [VRFC 10-311] analyzing module Reg_17
+INFO: [VRFC 10-311] analyzing module Reg_18
+INFO: [VRFC 10-311] analyzing module Reg_19
+INFO: [VRFC 10-311] analyzing module Reg_2
+INFO: [VRFC 10-311] analyzing module Reg_20
+INFO: [VRFC 10-311] analyzing module Reg_21
+INFO: [VRFC 10-311] analyzing module Reg_22
+INFO: [VRFC 10-311] analyzing module Reg_23
+INFO: [VRFC 10-311] analyzing module Reg_24
+INFO: [VRFC 10-311] analyzing module Reg_25
+INFO: [VRFC 10-311] analyzing module Reg_26
+INFO: [VRFC 10-311] analyzing module Reg_27
+INFO: [VRFC 10-311] analyzing module Reg_28
+INFO: [VRFC 10-311] analyzing module Reg_29
+INFO: [VRFC 10-311] analyzing module Reg_3
+INFO: [VRFC 10-311] analyzing module Reg_30
+INFO: [VRFC 10-311] analyzing module Reg_31
+INFO: [VRFC 10-311] analyzing module Reg_32
+INFO: [VRFC 10-311] analyzing module Reg_33
+INFO: [VRFC 10-311] analyzing module Reg_34
+INFO: [VRFC 10-311] analyzing module Reg_35
+INFO: [VRFC 10-311] analyzing module Reg_36
+INFO: [VRFC 10-311] analyzing module Reg_37
+INFO: [VRFC 10-311] analyzing module Reg_38
+INFO: [VRFC 10-311] analyzing module Reg_39
+INFO: [VRFC 10-311] analyzing module Reg_4
+INFO: [VRFC 10-311] analyzing module Reg_40
+INFO: [VRFC 10-311] analyzing module Reg_41
+INFO: [VRFC 10-311] analyzing module Reg_42
+INFO: [VRFC 10-311] analyzing module Reg_43
+INFO: [VRFC 10-311] analyzing module Reg_44
+INFO: [VRFC 10-311] analyzing module Reg_45
+INFO: [VRFC 10-311] analyzing module Reg_46
+INFO: [VRFC 10-311] analyzing module Reg_47
+INFO: [VRFC 10-311] analyzing module Reg_5
+INFO: [VRFC 10-311] analyzing module Reg_6
+INFO: [VRFC 10-311] analyzing module Reg_7
+INFO: [VRFC 10-311] analyzing module Reg_8
+INFO: [VRFC 10-311] analyzing module Reg_9
+INFO: [VRFC 10-311] analyzing module TopLevel_Convolution
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sim_1/new/TopLevel_Convolution_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FifoTesting_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto 28d6c5201c454e92bf6c4d8e32c4482b --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot FifoTesting_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.FifoTesting_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 22 differs from formal bit length 24 for port data_out [C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sim_1/new/TopLevel_Convolution_tb.v:33]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "FifoTesting_tb_time_impl.sdf", for root module "FifoTesting_tb/uut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "FifoTesting_tb_time_impl.sdf", for root module "FifoTesting_tb/uut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.Reg
+Compiling module xil_defaultlib.Reg_0
+Compiling module xil_defaultlib.Reg_1
+Compiling module xil_defaultlib.Reg_2
+Compiling module xil_defaultlib.Reg_3
+Compiling module xil_defaultlib.Reg_4
+Compiling module xil_defaultlib.Reg_5
+Compiling module xil_defaultlib.Reg_6
+Compiling module xil_defaultlib.Reg_7
+Compiling module xil_defaultlib.Reg_8
+Compiling module xil_defaultlib.Reg_9
+Compiling module xil_defaultlib.Reg_10
+Compiling module xil_defaultlib.Reg_11
+Compiling module xil_defaultlib.Reg_12
+Compiling module xil_defaultlib.Reg_13
+Compiling module xil_defaultlib.Reg_14
+Compiling module xil_defaultlib.Reg_15
+Compiling module xil_defaultlib.Reg_16
+Compiling module xil_defaultlib.Reg_17
+Compiling module xil_defaultlib.Reg_18
+Compiling module xil_defaultlib.Reg_19
+Compiling module xil_defaultlib.Reg_20
+Compiling module xil_defaultlib.Reg_21
+Compiling module xil_defaultlib.Reg_22
+Compiling module xil_defaultlib.Reg_23
+Compiling module xil_defaultlib.Reg_24
+Compiling module xil_defaultlib.Reg_25
+Compiling module xil_defaultlib.Reg_26
+Compiling module xil_defaultlib.Reg_27
+Compiling module xil_defaultlib.Reg_28
+Compiling module xil_defaultlib.Reg_29
+Compiling module xil_defaultlib.Reg_30
+Compiling module xil_defaultlib.Reg_31
+Compiling module xil_defaultlib.Reg_32
+Compiling module xil_defaultlib.Reg_33
+Compiling module xil_defaultlib.Reg_34
+Compiling module xil_defaultlib.Reg_35
+Compiling module xil_defaultlib.Reg_36
+Compiling module xil_defaultlib.Reg_37
+Compiling module xil_defaultlib.Reg_38
+Compiling module xil_defaultlib.Reg_39
+Compiling module xil_defaultlib.Reg_40
+Compiling module xil_defaultlib.Reg_41
+Compiling module xil_defaultlib.Reg_42
+Compiling module xil_defaultlib.Reg_43
+Compiling module xil_defaultlib.Reg_44
+Compiling module xil_defaultlib.Reg_45
+Compiling module xil_defaultlib.Reg_46
+Compiling module xil_defaultlib.Reg_47
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(DOA_REG=0,DOB...
+Compiling module simprims_ver.RAMB36E1(DOB_REG=1,READ_WIDTH_A=...
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.RB18_INTERNAL_VLOG(DOA_REG=0,DOB...
+Compiling module simprims_ver.RAMB18E1(DOB_REG=1,READ_WIDTH_A=...
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.x_lut3_mux4_reduced_0
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.CARRY4
+Compiling module simprims_ver.LUT5
+Compiling module xil_defaultlib.FifoTesting
+Compiling module xil_defaultlib.FifoTesting_48
+Compiling module xil_defaultlib.FifoTesting_49
+Compiling module xil_defaultlib.FifoTesting_50
+Compiling module xil_defaultlib.FifoTesting_51
+Compiling module xil_defaultlib.FifoTesting_52
+Compiling module xil_defaultlib.FifoTesting_53
+Compiling module xil_defaultlib.TopLevel_Convolution
+Compiling module xil_defaultlib.FifoTesting_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot FifoTesting_tb_time_impl
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/xsim.dir/FifoTesting_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/xsim.dir/FifoTesting_tb_time_impl/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Feb 19 12:56:44 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Feb 19 12:56:44 2017...
+run_program: Time (s): cpu = 00:00:09 ; elapsed = 00:01:57 . Memory (MB): peak = 1601.965 ; gain = 30.020
+INFO: [USF-XSim-69] 'elaborate' step finished in '117' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FifoTesting_tb_time_impl -key {Post-Implementation:sim_1:Timing:FifoTesting_tb} -tclbatch {FifoTesting_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source FifoTesting_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Pushed        1
+Pushed        2
+Pushed        3
+Pushed        4
+Pushed        5
+Pushed        6
+Pushed        7
+Pushed        8
+Pushed        9
+Pushed       10
+Pushed       11
+Pushed       12
+Pushed       13
+Pushed       14
+Pushed       15
+Pushed       16
+Pushed       17
+Pushed       18
+Pushed       18
+Pushed       19
+Pushed       20
+Pushed       21
+Pushed       21
+Pushed       22
+Pushed       23
+Pushed       24
+Pushed       25
+Pushed       26
+Pushed       27
+Pushed       28
+Pushed       29
+Pushed       30
+Pushed       31
+Pushed       32
+Pushed       33
+Pushed       34
+Pushed       35
+Pushed       36
+Pushed       37
+Pushed       38
+Pushed       39
+Pushed       40
+Pushed       41
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1607.289 ; gain = 5.324
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FifoTesting_tb_time_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:01:14 ; elapsed = 00:02:46 . Memory (MB): peak = 1607.289 ; gain = 824.383
+run 10500 ns
+Pushed       42
+Pushed       43
+Pushed       44
+Pushed       45
+Pushed       46
+Pushed       47
+Pushed       48
+Pushed       49
+Pushed       50
+Pushed       51
+Pushed       52
+Pushed       53
+Pushed       54
+Pushed       55
+Pushed       56
+Pushed       57
+Pushed       58
+Pushed       59
+Pushed       60
+Pushed       61
+Pushed       62
+Pushed       63
+Pushed       64
+Pushed       65
+Pushed       66
+Pushed       67
+Pushed       68
+Pushed       69
+Pushed       70
+Pushed       71
+Pushed       72
+Pushed       73
+Pushed       74
+Pushed       75
+Pushed       76
+Pushed       77
+Pushed       78
+Pushed       79
+Pushed       80
+Pushed       81
+Pushed       82
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 1607.289 ; gain = 0.000
+run 20500 ns
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:56 . Memory (MB): peak = 1607.289 ; gain = 0.000
+run 21500 ns
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:01:02 . Memory (MB): peak = 1607.289 ; gain = 0.000
+run 25500 ns
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:01:15 . Memory (MB): peak = 1611.855 ; gain = 4.566
+run 30500 ns
+run: Time (s): cpu = 00:00:06 ; elapsed = 00:01:29 . Memory (MB): peak = 1611.855 ; gain = 0.000
+run 50500 ns
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:02:27 . Memory (MB): peak = 1611.855 ; gain = 0.000
+run 70500 ns
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:03:27 . Memory (MB): peak = 1611.855 ; gain = 0.000
+run 100500 ns
+run: Time (s): cpu = 00:00:18 ; elapsed = 00:04:55 . Memory (MB): peak = 1611.855 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1611.855 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 19 13:20:54 2017...

@@ -1,0 +1,418 @@
+
+*** Running vivado
+    with args -log FifoTesting.vds -m64 -mode batch -messageDb vivado.pb -notrace -source FifoTesting.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source FifoTesting.tcl -notrace
+Command: synth_design -top FifoTesting -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14112 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 272.168 ; gain = 64.781
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FifoTesting' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:24]
+INFO: [Synth 8-256] done synthesizing module 'FifoTesting' (1#1) [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:24]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 309.637 ; gain = 102.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 309.637 ; gain = 102.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 309.637 ; gain = 102.250
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:66]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 352.824 ; gain = 145.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               24 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              120 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module FifoTesting 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
++---Registers : 
+	               24 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              120 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 447.289 ; gain = 239.902
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 447.594 ; gain = 240.207
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 447.594 ; gain = 240.207
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-------------+-----------+----------------------+--------------+
+|Module Name | RTL Object  | Inference | Size (Depth x Width) | Primitives   | 
++------------+-------------+-----------+----------------------+--------------+
+|FifoTesting | buf_mem_reg | Implied   | 8 x 24               | RAM32M x 8   | 
++------------+-------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[23]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[22]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[21]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[20]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[19]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[18]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[17]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[16]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[15]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[14]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[13]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[12]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[11]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[10]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[9]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[8]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[7]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[6]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[5]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[4]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[3]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[2]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[1]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[0]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (rd_ptr2_reg[2]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (rd_ptr2_reg[1]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (rd_ptr2_reg[0]) is unused and will be removed from module FifoTesting.
+WARNING: [Synth 8-3332] Sequential element (rd_ptr2_reg[2]__0) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'rd_ptr2_reg[2]__0/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+WARNING: [Synth 8-3332] Sequential element (rd_ptr2_reg[1]__0) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'rd_ptr2_reg[1]__0/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+WARNING: [Synth 8-3332] Sequential element (rd_ptr2_reg[0]__0) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'rd_ptr2_reg[0]__0/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:61]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[23]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[23]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[22]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[22]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[21]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[21]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[20]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[20]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[19]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[19]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[18]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[18]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[17]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[17]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[16]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[16]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[15]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[15]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[14]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[14]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[13]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[13]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[12]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[12]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[11]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[11]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[10]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[10]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[9]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[9]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[8]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[8]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[7]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[7]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[6]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[6]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[5]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[5]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[4]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[4]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[3]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[3]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[2]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[2]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[1]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[1]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+WARNING: [Synth 8-3332] Sequential element (buf_out2_reg[0]) is unused and will be removed from module FifoTesting.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'buf_out2_reg[0]/Q' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v:63]
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 468.301 ; gain = 260.914
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 468.301 ; gain = 260.914
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |LUT1   |     1|
+|3     |LUT2   |     1|
+|4     |LUT3   |     1|
+|5     |LUT4   |     2|
+|6     |LUT5   |     1|
+|7     |LUT6   |     8|
+|8     |RAM32M |     4|
+|9     |FDRE   |    35|
+|10    |IBUF   |    26|
+|11    |OBUF   |    48|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   128|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 468.301 ; gain = 260.914
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 81 critical warnings and 54 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 468.301 ; gain = 260.914
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 468.301 ; gain = 260.914
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 54 Warnings, 81 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 534.828 ; gain = 327.441
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 534.828 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 18 14:39:23 2017...

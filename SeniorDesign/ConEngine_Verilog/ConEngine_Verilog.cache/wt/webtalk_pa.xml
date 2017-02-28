@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Tue Feb 14 11:53:21 2017">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="05a62c7b95864d23aaf2e9405a647955" type="ProjectID"/>
+<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Gui Resources Info">
+<property name="BaseDialog_OK" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 0, 164, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 107, 245" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 12, 259" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 135, 482" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 136, 179" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 176, 257" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 185, 249" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 190, 243" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 199, 244" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 212, 97" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 23, 246" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 230, 246" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 246, 300" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 251, 250" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 253, 245" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 254, 112" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 32, 240" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 369, 249" value="2" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 37, 260" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 388, 249" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 408, 243" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 433, 244" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 45, 127" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 473, 246" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 490, 247" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 50, 115" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 551, 107" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 57, 140" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 603, 253" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 626, 244" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 69, 267" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 702, 245" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 71, 250" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 751, 245" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 776, 258" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 785, 266" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 92, 178" value="1" type="GuiResourceData"/>
+<property name="ConvolutionEngine.v, 95, 166" value="1" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="5" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, ConvolutionEngine.v], 2, false" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files, ConvolutionEngine.v], 2, false, false, false, false, false, true" value="1" type="GuiResourceData"/>
+<property name="PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, [root, Design Sources, Syntax Error Files], 1" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="33" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="19" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "FifoTesting_tb_time_impl.v"
+verilog xil_defaultlib  "../../../../Top_Module.srcs/sim_1/new/TopLevel_Convolution_tb.v"
+
+# Do not sort compile order
+nosort

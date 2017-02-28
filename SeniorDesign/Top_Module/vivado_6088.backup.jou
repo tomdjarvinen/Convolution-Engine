@@ -1,0 +1,145 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Feb 21 11:28:19 2017
+# Process ID: 6088
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5340 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
+add_files -norecurse C:/Users/saina/Desktop/SeniorDesign/ConEngine_Verilog/ConEngine_Verilog.srcs/sources_1/new/ConvolutionEngine.v
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 100500 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run all
+close_sim
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 2000 ns
+run 2000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 2000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+refresh_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 2000 ns
+run 3000 ns
+run 5000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+close_sim
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_design
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+close_sim
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_sim
+close_design
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+close_sim

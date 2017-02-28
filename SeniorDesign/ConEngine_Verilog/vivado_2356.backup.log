@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Feb 14 11:52:55 2017
+# Process ID: 2356
+# Current directory: F:/SeniorDesign/ConEngine_Verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1100 F:\SeniorDesign\ConEngine_Verilog\ConEngine_Verilog.xpr
+# Log file: F:/SeniorDesign/ConEngine_Verilog/vivado.log
+# Journal file: F:/SeniorDesign/ConEngine_Verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/SeniorDesign/ConEngine_Verilog/ConEngine_Verilog.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 14 11:53:28 2017...

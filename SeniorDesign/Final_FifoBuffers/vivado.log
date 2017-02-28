@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Feb 19 12:50:27 2017
+# Process ID: 12804
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Final_FifoBuffers
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15248 C:\Users\saina\Desktop\SeniorDesign\Final_FifoBuffers\Fifo_Buffers.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Final_FifoBuffers/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Final_FifoBuffers\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Final_FifoBuffers/Fifo_Buffers.xpr
+INFO: [Project 1-313] Project file moved from 'H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [Project 1-230] Project 'Fifo_Buffers.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 775.230 ; gain = 129.203
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 19 12:52:16 2017...

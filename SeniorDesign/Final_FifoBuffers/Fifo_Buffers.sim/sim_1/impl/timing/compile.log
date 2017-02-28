@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM32M_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module RAM32M_HD1
+INFO: [VRFC 10-311] analyzing module RAM32M_HD2
+INFO: [VRFC 10-311] analyzing module RAM32M_HD3
+INFO: [VRFC 10-311] analyzing module RAM32M_HD4
+INFO: [VRFC 10-311] analyzing module RAM32M_HD5
+INFO: [VRFC 10-311] analyzing module RAM32M_HD6
+INFO: [VRFC 10-311] analyzing module RAM32M_HD7
+INFO: [VRFC 10-311] analyzing module FifoTesting
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/Desktop/SeniorDesign/Final Code/Final_FifoBuffers/Fifo_Buffers.srcs/sim_1/new/FifoTesting_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FifoTesting_tb

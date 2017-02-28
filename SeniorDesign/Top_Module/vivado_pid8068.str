@@ -1,0 +1,164 @@
+/*
+
+Vivado v2016.3 (64-bit)
+SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+Process ID: 8068
+
+Current time: 	2/28/17 2:32:17 PM CST
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.3/tps/win64/jre
+
+User name: 	saina
+User home directory: C:/Users/saina
+User working directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI base root directory: C:/Xilinx/Vivado
+RDI data directory: C:/Xilinx/Vivado/2016.3/data
+RDI bin directory: C:/Xilinx/Vivado/2016.3/bin
+
+Vivado preferences path: C:/Users/saina/AppData/Roaming/Xilinx/Vivado/2016.3/vivado.ini
+Vivado layouts directory: C:/Users/saina/AppData/Roaming/Xilinx/Vivado/2016.3/layouts
+
+GUI allocated memory:	231 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 396 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr. Version: Vivado v2016.3 
+// bt:g (cd:JFrame):  Open Project : addNotify
+// [GUI Memory]: 38 MB (+37604kb) [00:00:13]
+// [Engine Memory]: 390 MB (+257370kb) [00:00:13]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 404 MB. GUI used memory: 30 MB. Current time: 2/28/17 2:32:19 PM CST
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 480 MB (+74452kb) [00:00:25]
+// [GUI Memory]: 55 MB (+15140kb) [00:00:26]
+// [GUI Memory]: 58 MB (+652kb) [00:00:29]
+// Tcl Message: open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'. 
+// Project name: Top_Module; location: C:/Users/saina/Desktop/SeniorDesign/Top_Module; part: xc7z020clg484-1
+// [GUI Memory]: 62 MB (+962kb) [00:00:32]
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 772.539 ; gain = 114.852 
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 66 MB (+1032kb) [00:00:59]
+// [Engine Memory]: 517 MB (+13173kb) [00:02:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 521 MB. GUI used memory: 41 MB. Current time: 2/28/17 2:34:14 PM CST
+// [GUI Memory]: 69 MB (+118kb) [00:05:00]
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 4000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// PAPropertyPanels.initPanels (TopLevel_Convolution.v) elapsed time: 0.2s
+// [GUI Memory]: 76 MB (+3066kb) [00:13:38]
+// Elapsed time: 785 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel_Convolution (TopLevel_Convolution.v)]", 1, true); // y:i (D:JPanel, cd:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TopLevel_Convolution (TopLevel_Convolution.v), fifo_1 - FifoTesting (FifoTesting.v)]", 2, false, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // v:K (u:D, cd:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_IMPLEMENTATION_TIMING, "Run Post-Implementation Timing Simulation"); // ac:JMenuItem (ai:JPopupMenu, cd:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_POST_IMPLEMENTATION_TIMING
+// TclEventType: FILE_SET_CHANGE
+// e:bt (cd:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation -mode post-implementation -type timing 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [SIM-utils-51] Simulation object is 'sim_1' 
+// HMemoryUtils.trashcanNow. Engine heap size: 646 MB. GUI used memory: 48 MB. Current time: 2/28/17 2:45:55 PM CST
+// [Engine Memory]: 647 MB (+109205kb) [00:13:53]
+// [Engine Memory]: 691 MB (+11940kb) [00:13:55]
+// [Engine Memory]: 737 MB (+11833kb) [00:14:00]
+// [Engine Memory]: 836 MB (+65167kb) [00:14:05]
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 836 MB. GUI used memory: 48 MB. Current time: 2/28/17 2:46:09 PM CST
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: C:/Xilinx/Vivado/2016.3/data/./parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 1s
+// [Engine Memory]: 921 MB (+45612kb) [00:14:08]
+// [GUI Memory]: 80 MB (+719kb) [00:14:09]
+// [GUI Memory]: 89 MB (+4710kb) [00:14:09]
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 2261 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2016.3 INFO: [Device 21-403] Loading part xc7z020clg484-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1080.293 ; gain = 27.809 
+// Tcl Message: Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1080.293 ; gain = 27.809 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 28 instances were transformed.   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 28 instances  
+// [GUI Memory]: 94 MB (+1211kb) [00:14:12]
+// Tcl Message: open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1173.047 ; gain = 387.215 
+// Device view-level: 0.0
+// [Engine Memory]: 967 MB (+183kb) [00:14:13]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgd elapsed time: 6.6s
+// Device view-level: 0.0
+// Tcl Message: INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'... INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.v" 
+// [GUI Memory]: 100 MB (+673kb) [00:14:14]
+// [Engine Memory]: 1,033 MB (+17890kb) [00:14:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,061 MB. GUI used memory: 77 MB. Current time: 2/28/17 2:46:25 PM CST
+// Tcl Message: write_verilog: Time (s): cpu = 00:00:31 ; elapsed = 00:00:16 . Memory (MB): peak = 1381.148 ; gain = 183.453 
+// Tcl Message: INFO: [SIM-utils-34] Writing SDF file... INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing/FifoTesting_tb_time_impl.sdf" 
+// [Engine Memory]: 1,217 MB (+139039kb) [00:14:29]
+// RouteApi::initDelayMediator elapsed time: 19s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// [Engine Memory]: 1,447 MB (+177187kb) [00:14:33]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,469 MB. GUI used memory: 77 MB. Current time: 2/28/17 2:46:45 PM CST
+// Tcl Message: write_sdf: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1684.129 ; gain = 302.980 
+// Tcl Message: "xvlog -m64 --relax -prj FifoTesting_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-311] analyzing module Reg_6 INFO: [VRFC 10-311] analyzing module Reg_7 INFO: [VRFC 10-311] analyzing module Reg_8 INFO: [VRFC 10-311] analyzing module Reg_9 INFO: [VRFC 10-311] analyzing module TFlipFlop INFO: [VRFC 10-311] analyzing module TopLevel_Convolution INFO: [VRFC 10-311] analyzing module glbl INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sim_1/new/TopLevel_Convolution_tb.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module FifoTesting_tb 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.sim/sim_1/impl/timing' 
+// Tcl Message: Vivado Simulator 2016.3 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto 28d6c5201c454e92bf6c4d8e32c4482b --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot FifoTesting_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.FifoTesting_tb xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. 
+// Tcl Message: Starting static elaboration 
+// Tcl Message: Completed static elaboration 
+// Elapsed time: 185 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a:JButton (JPanel:JComponent, e:bt)
+// 'd' command handler elapsed time: 185 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TopLevel_Convolution.v", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+selectCodeEditor("TopLevel_Convolution.v", 35, 113); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 117 seconds
+selectCodeEditor("TopLevel_Convolution.v", 179, 348); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 106 MB (+895kb) [00:19:26]
+// PAPropertyPanels.initPanels (ConEngine_Blue (ConvolutionEngine)) elapsed time: 1.4s
+// Elapsed time: 35 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[TopLevel_Convolution, ConEngine_Blue (ConvolutionEngine)]", 3, false); // aR:bd (JViewport:JComponent, cd:JFrame)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[TopLevel_Convolution, ConEngine_Blue (ConvolutionEngine)]", 3, true, false, false, false, false, true); // aR:bd (JViewport:JComponent, cd:JFrame) - Double Click - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[TopLevel_Convolution, ConEngine_Blue (ConvolutionEngine)]", 3, true); // aR:bd (JViewport:JComponent, cd:JFrame) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[TopLevel_Convolution, ConEngine_Blue (ConvolutionEngine)]", 3, true, false, false, false, false, true); // aR:bd (JViewport:JComponent, cd:JFrame) - Double Click - Node
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cd:JFrame)
+// [GUI Memory]: 117 MB (+6416kb) [00:19:55]

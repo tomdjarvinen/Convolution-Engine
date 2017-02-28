@@ -1,0 +1,40 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 86fc52dfbbdd4cf8b69190ad5e02bc8c --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot FifoTesting_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.FifoTesting_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "FifoTesting_tb_time_impl.sdf", for root module "FifoTesting_tb/uut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "FifoTesting_tb_time_impl.sdf", for root module "FifoTesting_tb/uut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.RAMD32
+Compiling module simprims_ver.RAMS32
+Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.x_lut3_mux4_reduced_0
+Compiling module simprims_ver.LUT3
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.RAM32M_HD1
+Compiling module xil_defaultlib.RAM32M_HD2
+Compiling module xil_defaultlib.RAM32M_HD3
+Compiling module xil_defaultlib.RAM32M_HD4
+Compiling module xil_defaultlib.RAM32M_HD5
+Compiling module xil_defaultlib.RAM32M_HD6
+Compiling module xil_defaultlib.RAM32M_HD7
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.LUT4
+Compiling module xil_defaultlib.FifoTesting
+Compiling module xil_defaultlib.FifoTesting_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot FifoTesting_tb_time_impl
