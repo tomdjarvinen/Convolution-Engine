@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Mon Apr 03 13:17:00 2017
+# Process ID: 3688
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9076 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
+add_files -norecurse -scan_for_includes C:/Users/saina/Desktop/SeniorDesign/Division/Division.srcs/sources_1/new/Divide.v
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
+source FifoTesting_tb.tcl
+run 3000 ns

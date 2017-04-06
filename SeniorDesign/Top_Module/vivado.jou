@@ -2,53 +2,14 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Feb 28 14:31:58 2017
-# Process ID: 8068
+# Start of session at: Thu Apr 06 09:27:09 2017
+# Process ID: 3348
 # Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8032 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2448 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
 # Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
 # Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
-create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name mult_gen_1
-set_property -dict [list CONFIG.PortAType {Signed} CONFIG.PortAWidth {8} CONFIG.PortBType {Signed} CONFIG.PortBWidth {8} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OutputWidthHigh {15}] [get_ips mult_gen_1]
-generate_target {instantiation_template} [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_1/mult_gen_1.xci]
-create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name mult_gen_2
-set_property -dict [list CONFIG.PortAType {Unsigned} CONFIG.PortAWidth {8} CONFIG.PortBType {Unsigned} CONFIG.PortBWidth {8} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OutputWidthHigh {15}] [get_ips mult_gen_2]
-generate_target {instantiation_template} [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci]
-generate_target all [get_files  c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci]
-export_ip_user_files -of_objects [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci]
-launch_runs -jobs 2 mult_gen_2_synth_1
-wait_on_run mult_gen_2_synth_1
-export_simulation -of_objects [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci] -directory C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.ip_user_files -ipstatic_source_dir C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.cache/compile_simlib/modelsim} {questa=C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.cache/compile_simlib/questa} {riviera=C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.cache/compile_simlib/riviera} {activehdl=C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-launch_simulation -mode post-implementation -type timing
-open_wave_config C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
-source FifoTesting_tb.tcl
-run 8000 ns
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-close_sim
-launch_runs impl_1 -jobs 2
-wait_on_run impl_1
-close_design
-launch_simulation -mode post-implementation -type timing
-open_wave_config C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
-source FifoTesting_tb.tcl
-run 3000 ns
-close_sim
+add_files -norecurse -scan_for_includes C:/Users/saina/Desktop/SeniorDesign/Division/Division.srcs/sources_1/new/Divide.v
+open_run synth_1 -name synth_1

@@ -42,6 +42,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -57,10 +58,14 @@ set rc [catch {
   set_property parent.project_path C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr [current_project]
   set_property ip_cache_permissions disable [current_project]
   add_files -quiet C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.runs/synth_1/TopLevel_Convolution.dcp
-  add_files -quiet c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.dcp
-  set_property netlist_only true [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2.dcp]
-  read_xdc -mode out_of_context -ref mult_gen_2 -cells U0 c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2_ooc.xdc
-  set_property processing_order EARLY [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_2/mult_gen_2_ooc.xdc]
+  add_files -quiet c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_0_2/mult_gen_0.dcp
+  set_property netlist_only true [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_0_2/mult_gen_0.dcp]
+  add_files -quiet c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_1_1/mult_gen_1.dcp
+  set_property netlist_only true [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_1_1/mult_gen_1.dcp]
+  read_xdc -mode out_of_context -ref mult_gen_0 -cells U0 c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_0_2/mult_gen_0_ooc.xdc
+  set_property processing_order EARLY [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_0_2/mult_gen_0_ooc.xdc]
+  read_xdc -mode out_of_context -ref mult_gen_1 -cells U0 c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_1_1/mult_gen_1_ooc.xdc
+  set_property processing_order EARLY [get_files c:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.srcs/sources_1/ip/mult_gen_1_1/mult_gen_1_ooc.xdc]
   link_design -top TopLevel_Convolution -part xc7z020clg484-1
   write_hwdef -file TopLevel_Convolution.hwdef
   close_msg_db -file init_design.pb

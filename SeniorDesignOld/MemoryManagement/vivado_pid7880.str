@@ -1,0 +1,565 @@
+/*
+
+Vivado v2016.2 (64-bit)
+SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+Process ID: 7880
+
+Current time: 	2/9/17 2:38:32 PM CST
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 7
+Version: 6.1
+Architecture: amd64
+Available processors (cores): 1
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.2/tps/win64/jre
+
+User name: 	sxm140630
+User home directory: C:/Users/sxm140630
+User working directory: H:/Desktop/SeniorDesign/MemoryManagement
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.2/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.2/bin
+
+Vivado preferences path: C:/Users/sxm140630/AppData/Roaming/Xilinx/Vivado/2016.2/vivado.ini
+Vivado layouts directory: C:/Users/sxm140630/AppData/Roaming/Xilinx/Vivado/2016.2/layouts
+
+GUI allocated memory:	122 MB
+GUI max memory:		3,066 MB
+Engine allocated memory: 375 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bL:g (cv:JFrame):  Open Project : addNotify
+// [GUI Memory]: 34 MB (+33578kb) [00:00:09]
+// [Engine Memory]: 369 MB (+235833kb) [00:00:09]
+// Opening Vivado Project: H:\Desktop\SeniorDesign\MemoryManagement\MemoryManagement.xpr. Version: Vivado v2016.2 
+// Tcl Message: open_project H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.xpr 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 385 MB. GUI used memory: 29 MB. Current time: 2/9/17 2:38:34 PM CST
+// [Engine Memory]: 398 MB (+10795kb) [00:00:13]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 62 MB (+27586kb) [00:00:19]
+// [Engine Memory]: 485 MB (+70415kb) [00:00:19]
+// [GUI Memory]: 71 MB (+5237kb) [00:00:20]
+// Tcl Message: open_project H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: MemoryManagement; location: H:/Desktop/SeniorDesign/MemoryManagement; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 560.852 ; gain = 130.996 
+// TclEventType: DG_UPDATE_GRAPH
+dismissDialog("Open Project"); // bL:g (cv:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 520 MB (+11053kb) [00:00:34]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 75 MB (+568kb) [00:00:36]
+// HMemoryUtils.trashcanNow. Engine heap size: 520 MB. GUI used memory: 31 MB. Current time: 2/9/17 2:38:59 PM CST
+// PAPropertyPanels.initPanels (MemBlock.bd) elapsed time: 0.3s
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MemBlock (MemBlock.bd)]", 1, true); // z:k (G:JPanel, cv:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, MemBlock (MemBlock.bd)]", 1, true, false, false, false, false, true); // z:k (G:JPanel, cv:JFrame) - Double Click - Node
+// bL:g (cv:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd} 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 543 MB. GUI used memory: 34 MB. Current time: 2/9/17 2:39:49 PM CST
+// [Engine Memory]: 574 MB (+28982kb) [00:01:28]
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M 
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// Tcl Message: Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 648 MB (+47614kb) [00:01:39]
+// [GUI Memory]: 83 MB (+4480kb) [00:01:41]
+// [Engine Memory]: 684 MB (+4222kb) [00:01:45]
+// PAPropertyPanels.initPanels (MemBlock.bd) elapsed time: 1.1s
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: Successfully read diagram <MemBlock> from BD file <H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd> 
+// HMemoryUtils.trashcanNow. Engine heap size: 684 MB. GUI used memory: 38 MB. Current time: 2/9/17 2:40:08 PM CST
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 732.098 ; gain = 154.941 
+// Elapsed time: 24 seconds
+dismissDialog("Open Block Design"); // bL:g (cv:JFrame)
+// Elapsed time: 1097 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0, "AXI-Stream FIFO", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0, "AXI-Stream FIFO", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0, "AXI-Stream FIFO", 0, false, false, false, false, false, true); // O:as (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// bL:g (cv:JFrame):  Add IP : addNotify
+// [GUI Memory]: 94 MB (+6986kb) [00:20:13]
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.1 axi_fifo_mm_s_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Command: 'set_property location {1 286 -212} [get_bd_cells axi_fifo_mm_s_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 286 -212} [get_bd_cells axi_fifo_mm_s_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+// Elapsed time: 19 seconds
+selectComboBox("Data Interface (C_DATA_INTERFACE_TYPE)", "AXI4 Lite", 0); // bG:f (F:JPanel, p:g)
+// Elapsed time: 28 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells axi_fifo_mm_s_0] 
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 100 MB (+2327kb) [00:21:15]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "fifo gen"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+// bL:g (cv:JFrame):  Add IP : addNotify
+// Tcl Message: startgroup 
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.1 fifo_generator_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /fifo_generator_0Executing the post_config_ip from bd 
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// HMemoryUtils.trashcanNow. Engine heap size: 710 MB. GUI used memory: 47 MB. Current time: 2/9/17 2:59:44 PM CST
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// [Engine Memory]: 720 MB (+1804kb) [00:21:28]
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectRadioButton((HResource) null, "AXI Stream"); // aI:a
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "AXI4 Stream Ports", 1); // aT:g (F:JPanel, p:g)
+selectComboBox("TDATA NUM BYTES (TDATA_NUM_BYTES)", "4", 3); // z:f (F:JPanel, p:g)
+// Elapsed time: 32 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Config", 2); // aT:g (F:JPanel, p:g)
+selectComboBox("FIFO Depth (Input_Depth_axis)", "2048", 7); // z:f (F:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Status Flags", 3); // aT:g (F:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 4); // aT:g (F:JPanel, p:g)
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// bL:g (p:g):  Customize IP : addNotify
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: INFO: [xilinx.com:ip:fifo_generator:13.1-5968] /fifo_generator_0Executing the post_config_ip from bd 
+// Tcl Message: endgroup 
+dismissDialog("Customize IP"); // bL:g (p:g)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 111 MB (+5613kb) [00:22:45]
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// Elapsed time: 99 seconds
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 755 MB. GUI used memory: 71 MB. Current time: 2/9/17 3:02:45 PM CST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "AXI4 Stream Ports", 1); // aT:g (F:JPanel, p:g)
+// [GUI Memory]: 117 MB (+761kb) [00:31:00]
+// [Engine Memory]: 768 MB (+12141kb) [00:34:03]
+// Elapsed time: 579 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1067, 95); // dI:N (JPanel:JComponent, cv:JFrame)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins fifo_generator_0/S_AXIS] 
+// HMemoryUtils.trashcanNow. Engine heap size: 778 MB. GUI used memory: 72 MB. Current time: 2/9/17 3:12:55 PM CST
+// Elapsed time: 49 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream reg"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream register"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+// bL:g (cv:JFrame):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Command: 'set_property location {3 639 -215} [get_bd_cells axis_register_slice_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 639 -215} [get_bd_cells axis_register_slice_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectButton(PAResourceEtoH.HACGCTextField_VALUE_OF_SPECIFIED_PARAMETER, "TDATA Width (bytes) (TDATA_NUM_BYTES)"); // s:JideToggleButton (F:JPanel, p:g): TRUE
+setText("TDATA Width (bytes)", "4"); // O:ao (aU:N, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+// Tcl Command: 'set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_register_slice_0]'
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_register_slice_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// bL:g (p:g):  Customize IP : addNotify
+// TclEventType: RSB_PROPERTY_CHANGE
+// [GUI Memory]: 123 MB (+241kb) [00:35:25]
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Command: 'set_property -dict [list CONFIG.TDATA_NUM_BYTES {4}] [get_bd_cells axis_register_slice_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.TDATA_NUM_BYTES {4}] [get_bd_cells axis_register_slice_0] 
+// TclEventType: RSB_PROPERTY_CHANGE
+dismissDialog("Customize IP"); // bL:g (p:g)
+// Tcl Command: 'set_property location {2 643 -224} [get_bd_cells axis_register_slice_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 643 -224} [get_bd_cells axis_register_slice_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins fifo_generator_0/M_AXIS] [get_bd_intf_pins axis_register_slice_0/S_AXIS] 
+// Elapsed time: 36 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "multip"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "multip"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+// Elapsed time: 33 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+// Elapsed time: 100 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "adder"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Adder/Subtracter", 0, "Adder/Subtracter", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Adder/Subtracter", 0, "Adder/Subtracter", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Adder/Subtracter", 0); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Adder/Subtracter", 0, "Adder/Subtracter", 0, false, false, false, false, false, true); // O:as (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// bL:g (cv:JFrame):  Add IP : addNotify
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:c_addsub:12.0 c_addsub_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Command: 'set_property location {4 827 -229} [get_bd_cells c_addsub_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {4 827 -229} [get_bd_cells c_addsub_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectButton(PAResourceTtoZ.XPG_ComboBox_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (F:JPanel, p:g): TRUE
+selectButton(PAResourceTtoZ.XPG_ComboBox_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (F:JPanel, p:g): TRUE
+selectComboBox("A (A_Type)", "Unsigned", 1); // bG:f (F:JPanel, p:g)
+selectComboBox("B (B_Type)", "Unsigned", 1); // bG:f (F:JPanel, p:g)
+setText("A", "15"); // O:ao (cS:N, p:g)
+setText("B", "15"); // O:ao (cS:N, p:g)
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (F:JPanel, p:g): TRUE
+setText("A", "24"); // O:ao (cS:N, p:g)
+selectButton(PAResourceTtoZ.XPG_TextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (F:JPanel, p:g): TRUE
+setText("B", "24"); // O:ao (cS:N, p:g)
+// Elapsed time: 13 seconds
+setText("Latency", "0"); // O:ao (cS:N, p:g)
+// Elapsed time: 28 seconds
+selectCheckBox((HResource) null, "Constant Input", true); // h:JCheckBox (bu:G, p:g): TRUE
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Control", 1); // cR:g (F:JPanel, p:g)
+selectCheckBox((HResource) null, "Clock Enable (CE)", false); // h:JCheckBox (bu:G, p:g): FALSE
+selectCheckBox((HResource) null, "Bypass", true); // h:JCheckBox (bu:G, p:g): TRUE
+// [GUI Memory]: 130 MB (+808kb) [00:42:36]
+// Elapsed time: 681 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Tcl Command: 'set_property -dict [list CONFIG.A_Width.VALUE_SRC USER CONFIG.A_Type.VALUE_SRC USER CONFIG.B_Width.VALUE_SRC USER CONFIG.B_Type.VALUE_SRC USER] [get_bd_cells c_addsub_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Command: 'set_property -dict [list CONFIG.A_Type {Unsigned} CONFIG.B_Type {Unsigned} CONFIG.A_Width {24} CONFIG.B_Width {24} CONFIG.Latency {0} CONFIG.B_Constant {true} CONFIG.CE {false} CONFIG.Bypass {true} CONFIG.Out_Width {24} CONFIG.B_Value {000000000000000000000000}] [get_bd_cells c_addsub_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.A_Width.VALUE_SRC USER CONFIG.A_Type.VALUE_SRC USER CONFIG.B_Width.VALUE_SRC USER CONFIG.B_Type.VALUE_SRC USER] [get_bd_cells c_addsub_0] 
+// Tcl Message: set_property -dict [list CONFIG.A_Type {Unsigned} CONFIG.B_Type {Unsigned} CONFIG.A_Width {24} CONFIG.B_Width {24} CONFIG.Latency {0} CONFIG.B_Constant {true} CONFIG.CE {false} CONFIG.Bypass {true} CONFIG.Out_Width {24} CONFIG.B_Value {000000000000000000000000}] [get_bd_cells c_addsub_0] 
+// Tcl Message: endgroup 
+// Elapsed time: 17 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "decoder"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Reed-Solomon Decoder", 3, "Reed-Solomon Decoder", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Reed-Solomon Decoder", 3); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Reed-Solomon Decoder", 3, "Reed-Solomon Decoder", 0, false, false, false, false, false, true); // O:as (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// bL:g (cv:JFrame):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:rs_decoder:9.0 rs_decoder_0 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+// TclEventType: DG_UPDATE_GRAPH
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// TclEventType: IP_LOCK_CHANGE
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 798 MB. GUI used memory: 79 MB. Current time: 2/9/17 3:29:56 PM CST
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+// Elapsed time: 10 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Implementation Options", 1); // cR:g (F:JPanel, p:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Optional Pins", 2); // cR:g (F:JPanel, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells rs_decoder_0] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 19 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "axi stream"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+// bL:g (cv:JFrame):  Add IP : addNotify
+// Tcl Message: startgroup 
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Command: 'set_property location {1 59 16} [get_bd_cells axis_broadcaster_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 59 16} [get_bd_cells axis_broadcaster_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axis_register_slice_0/M_AXIS] [get_bd_intf_pins axis_broadcaster_0/S_AXIS] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectComboBox("Number of Master Interfaces (NUM_MI)", "3", 1); // z:f (F:JPanel, p:g)
+// [Engine Memory]: 807 MB (+207kb) [00:52:33]
+selectButton(PAResourceEtoH.HACGCTextField_VALUE_OF_SPECIFIED_PARAMETER, "SI TDATA Width (bytes) (S_TDATA_NUM_BYTES)"); // s:JideToggleButton (F:JPanel, p:g): TRUE
+// Elapsed time: 12 seconds
+setText("SI TDATA Width (bytes)", "4"); // O:ao (aU:N, p:g)
+selectButton(PAResourceEtoH.HACGCTextField_VALUE_OF_SPECIFIED_PARAMETER, "MI TDATA Width (bytes) (M_TDATA_NUM_BYTES)"); // s:JideToggleButton (F:JPanel, p:g): TRUE
+selectComboBox("Number of Master Interfaces (NUM_MI)", "4", 2); // z:f (F:JPanel, p:g)
+setText("SI TDATA Width (bytes)", "3"); // O:ao (aU:N, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Stream Splitting Options", 1); // aT:g (F:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "AXI4-Stream Broadcaster", 0); // aT:g (F:JPanel, p:g)
+selectComboBox("Number of Master Interfaces (NUM_MI)", "3", 1); // z:f (F:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Stream Splitting Options", 1); // aT:g (F:JPanel, p:g)
+// Elapsed time: 12 seconds
+setText("M01 TDATA Remap String", "tdata[15:8]"); // O:ao (aU:N, p:g)
+setText("M02 TDATA Remap String", "tdata[23:16]"); // O:ao (aU:N, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Tcl Command: 'set_property -dict [list CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_broadcaster_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Command: 'set_property -dict [list CONFIG.NUM_MI {3} CONFIG.S_TDATA_NUM_BYTES {3} CONFIG.M01_TDATA_REMAP {tdata[15:8]} CONFIG.M02_TDATA_REMAP {tdata[23:16]} CONFIG.M03_TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_broadcaster_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells axis_broadcaster_0] 
+// Tcl Message: set_property -dict [list CONFIG.NUM_MI {3} CONFIG.S_TDATA_NUM_BYTES {3} CONFIG.M01_TDATA_REMAP {tdata[15:8]} CONFIG.M02_TDATA_REMAP {tdata[23:16]} CONFIG.M03_TDATA_REMAP {tdata[7:0]}] [get_bd_cells axis_broadcaster_0] 
+// Tcl Message: endgroup 
+// Elapsed time: 17 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "mul"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Multiplier", 3, "Multiplier", 0, false); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Multiplier", 3); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Multiplier", 3, "Multiplier", 0, false, false, false, false, false, true); // O:as (JViewport:JComponent, ResizableWindow:JWindow) - Double Click
+// bL:g (cv:JFrame):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:mult_gen:12.0 mult_gen_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Command: 'set_property location {3 588 58} [get_bd_cells mult_gen_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 588 58} [get_bd_cells mult_gen_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+selectComboBox("Multiplier Construction (Multiplier_Construction)", "Use Mults", 1); // z:f (F:JPanel, p:g)
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER, "Data Type (PortAType)"); // s:JideToggleButton (JPanel:JComponent, p:g): TRUE
+selectButton(PAResourceEtoH.HACGCComboBox_VALUE_OF_SPECIFIED_PARAMETER_MANUAL, "Data Type (PortAType)"); // s:JideToggleButton (JPanel:JComponent, p:g): FALSE
+selectButton(PAResourceEtoH.HACGCTextField_VALUE_OF_SPECIFIED_PARAMETER, "Width (PortAWidth)"); // s:JideToggleButton (F:JPanel, p:g): TRUE
+setText("Width", "8"); // O:ao (aU:N, p:g)
+selectButton(PAResourceEtoH.HACGCTextField_VALUE_OF_SPECIFIED_PARAMETER, (String) null); // s:JideToggleButton (F:JPanel, p:g): TRUE
+setText("Width", "8"); // O:ao (aU:N, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Output and Control", 1); // aT:g (F:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Output and Control", 1); // aT:g (F:JPanel, p:g)
+// [Engine Memory]: 850 MB (+3040kb) [00:54:25]
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Output and Control", 1); // aT:g (F:JPanel, p:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 850 MB. GUI used memory: 83 MB. Current time: 2/9/17 3:32:46 PM CST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // aT:g (F:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Output and Control", 1); // aT:g (F:JPanel, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Tcl Command: 'set_property -dict [list CONFIG.PortBWidth.VALUE_SRC USER CONFIG.PortAWidth.VALUE_SRC USER CONFIG.PortAType.VALUE_SRC PROPAGATED] [get_bd_cells mult_gen_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Command: 'set_property -dict [list CONFIG.PortAWidth {8} CONFIG.PortBWidth {8} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OutputWidthHigh {15}] [get_bd_cells mult_gen_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.PortBWidth.VALUE_SRC USER CONFIG.PortAWidth.VALUE_SRC USER CONFIG.PortAType.VALUE_SRC PROPAGATED] [get_bd_cells mult_gen_0] 
+// Tcl Message: set_property -dict [list CONFIG.PortAWidth {8} CONFIG.PortBWidth {8} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OutputWidthHigh {15}] [get_bd_cells mult_gen_0] 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {2 673 31} [get_bd_cells mult_gen_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 673 31} [get_bd_cells mult_gen_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axis_broadcaster_0/m_axis_tdata] [get_bd_pins mult_gen_0/A] 
+// Elapsed time: 19 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "cons"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, ResizableWindow:JWindow)
+applyEnter(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, (String) null); // O:as (JViewport:JComponent, ResizableWindow:JWindow)
+// bL:g (cv:JFrame):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Command: 'set_property location {3 442 147} [get_bd_cells xlconstant_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 442 147} [get_bd_cells xlconstant_0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins axis_broadcaster_0/m_axis_tready] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+setText("Const Width", "3"); // O:ao (cS:N, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Tcl Command: 'set_property -dict [list CONFIG.CONST_WIDTH {3}] [get_bd_cells xlconstant_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CONST_WIDTH {3}] [get_bd_cells xlconstant_0] 
+// p:g (cv:JFrame): Re-customize IP: addNotify
+// bL:g (p:g):  Customize IP : addNotify
+// Tcl Message: endgroup 
+dismissDialog("Customize IP"); // bL:g (p:g)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// P:bL (cv:JFrame):  Re-customize IP : addNotify
+// p:g (cv:JFrame): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // P:bL (cv:JFrame)
+setText("Const Val", "7"); // O:ao (cS:N, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Re-customize IP"); // p:g (cv:JFrame)
+// Tcl Command: 'set_property -dict [list CONFIG.CONST_VAL {7}] [get_bd_cells xlconstant_0]'
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.CONST_VAL {7}] [get_bd_cells xlconstant_0] 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// bL:g (cv:JFrame):  Save Design : addNotify
+// Tcl Message: save_bd_design 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <H:/Desktop/SeniorDesign/MemoryManagement/MemoryManagement.srcs/sources_1/bd/MemBlock/MemBlock.bd>  
+// Elapsed time: 26 seconds
+dismissDialog("Save Design"); // bL:g (cv:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH

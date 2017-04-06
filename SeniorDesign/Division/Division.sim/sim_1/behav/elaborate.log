@@ -1,0 +1,19 @@
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto 686adc9d13294cecbbe5d16e0a8b3ed7 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Divide_tb_behav xil_defaultlib.Divide_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_0_dsp
+Compiling module xil_defaultlib.mult_gen_0_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_0_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_0
+Compiling module xil_defaultlib.Divide
+Compiling module xil_defaultlib.Divide_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Divide_tb_behav

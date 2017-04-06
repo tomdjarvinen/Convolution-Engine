@@ -1,0 +1,851 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date             : Thu Apr 06 11:15:11 2017
+| Host             : DESKTOP-7PO5321 running 64-bit major release  (build 9200)
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xc7z020clg484-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 79.563 (Junction temp exceeded!) |
+| Dynamic (W)              | 78.523                           |
+| Device Static (W)        | 1.040                            |
+| Effective TJA (C/W)      | 11.5                             |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic              |    15.951 |    13043 |       --- |             --- |
+|   LUT as Logic           |    10.503 |     2942 |     53200 |            5.53 |
+|   CARRY4                 |     2.625 |      772 |     13300 |            5.80 |
+|   Register               |     2.501 |     8157 |    106400 |            7.67 |
+|   LUT as Distributed RAM |     0.244 |      116 |     17400 |            0.67 |
+|   LUT as Shift Register  |     0.073 |       30 |     17400 |            0.17 |
+|   BUFG                   |     0.006 |        1 |        32 |            3.13 |
+|   Others                 |     0.000 |      729 |       --- |             --- |
+| Signals                  |    35.030 |    11707 |       --- |             --- |
+| DSPs                     |    25.038 |      150 |       220 |           68.18 |
+| I/O                      |     2.503 |       67 |       200 |           33.50 |
+| Static Power             |     1.040 |          |           |                 |
+| Total                    |    79.563 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |    76.438 |      76.140 |      0.299 |
+| Vccaux    |       1.800 |     0.295 |       0.195 |      0.100 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     1.130 |       1.129 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.026 |       0.000 |      0.026 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------------+-----------+
+| Name                                                                                | Power (W) |
++-------------------------------------------------------------------------------------+-----------+
+| design_1_wrapper                                                                    |    78.523 |
+|   design_1_i                                                                        |    75.785 |
+|     myip_0                                                                          |    75.785 |
+|       inst                                                                          |    75.785 |
+|         ConEng                                                                      |    75.012 |
+|           ConEngine_Blue                                                            |    16.786 |
+|             DSP_1                                                                   |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_10                                                                  |     0.172 |
+|               U0                                                                    |     0.172 |
+|                 i_mult                                                              |     0.172 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.172 |
+|             DSP_11                                                                  |     0.214 |
+|               U0                                                                    |     0.214 |
+|                 i_mult                                                              |     0.214 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.214 |
+|             DSP_12                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_13                                                                  |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_14                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_15                                                                  |     0.181 |
+|               U0                                                                    |     0.181 |
+|                 i_mult                                                              |     0.181 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.181 |
+|             DSP_16                                                                  |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_17                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_18                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_19                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_2                                                                   |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_20                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_21                                                                  |     0.172 |
+|               U0                                                                    |     0.172 |
+|                 i_mult                                                              |     0.172 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.172 |
+|             DSP_22                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_23                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_24                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_25                                                                  |     0.186 |
+|               U0                                                                    |     0.186 |
+|                 i_mult                                                              |     0.186 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.186 |
+|             DSP_26                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_27                                                                  |     0.185 |
+|               U0                                                                    |     0.185 |
+|                 i_mult                                                              |     0.185 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.185 |
+|             DSP_28                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_29                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_3                                                                   |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_30                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_31                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_32                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_33                                                                  |     0.183 |
+|               U0                                                                    |     0.183 |
+|                 i_mult                                                              |     0.183 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.183 |
+|             DSP_34                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_35                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_36                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_37                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_38                                                                  |     0.170 |
+|               U0                                                                    |     0.170 |
+|                 i_mult                                                              |     0.170 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.170 |
+|             DSP_39                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_4                                                                   |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_40                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_41                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_42                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_43                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_44                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_45                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_46                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_47                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_48                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_49                                                                  |     0.171 |
+|               U0                                                                    |     0.171 |
+|                 i_mult                                                              |     0.171 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.171 |
+|             DSP_5                                                                   |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_6                                                                   |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_7                                                                   |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_8                                                                   |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_9                                                                   |     0.182 |
+|               U0                                                                    |     0.182 |
+|                 i_mult                                                              |     0.182 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.182 |
+|           ConEngine_Green                                                           |    17.367 |
+|             DSP_1                                                                   |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_10                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_11                                                                  |     0.215 |
+|               U0                                                                    |     0.215 |
+|                 i_mult                                                              |     0.215 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.215 |
+|             DSP_12                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_13                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_14                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_15                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_16                                                                  |     0.181 |
+|               U0                                                                    |     0.181 |
+|                 i_mult                                                              |     0.181 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.181 |
+|             DSP_17                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_18                                                                  |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_19                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_2                                                                   |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_20                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_21                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_22                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_23                                                                  |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_24                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_25                                                                  |     0.184 |
+|               U0                                                                    |     0.184 |
+|                 i_mult                                                              |     0.184 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.184 |
+|             DSP_26                                                                  |     0.186 |
+|               U0                                                                    |     0.186 |
+|                 i_mult                                                              |     0.186 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.186 |
+|             DSP_27                                                                  |     0.181 |
+|               U0                                                                    |     0.181 |
+|                 i_mult                                                              |     0.181 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.181 |
+|             DSP_28                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_29                                                                  |     0.172 |
+|               U0                                                                    |     0.172 |
+|                 i_mult                                                              |     0.172 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.172 |
+|             DSP_3                                                                   |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_30                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_31                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_32                                                                  |     0.172 |
+|               U0                                                                    |     0.172 |
+|                 i_mult                                                              |     0.172 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.172 |
+|             DSP_33                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_34                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_35                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_36                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_37                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_38                                                                  |     0.182 |
+|               U0                                                                    |     0.182 |
+|                 i_mult                                                              |     0.182 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.182 |
+|             DSP_39                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_4                                                                   |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_40                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_41                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_42                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_43                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_44                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_45                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_46                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_47                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_48                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_49                                                                  |     0.171 |
+|               U0                                                                    |     0.171 |
+|                 i_mult                                                              |     0.171 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.171 |
+|             DSP_5                                                                   |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_6                                                                   |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_7                                                                   |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_8                                                                   |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_9                                                                   |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|           ConEngine_Red                                                             |    17.663 |
+|             DSP_1                                                                   |     0.179 |
+|               U0                                                                    |     0.179 |
+|                 i_mult                                                              |     0.179 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.179 |
+|             DSP_10                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_11                                                                  |     0.214 |
+|               U0                                                                    |     0.214 |
+|                 i_mult                                                              |     0.214 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.214 |
+|             DSP_12                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_13                                                                  |     0.187 |
+|               U0                                                                    |     0.187 |
+|                 i_mult                                                              |     0.187 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.187 |
+|             DSP_14                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_15                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_16                                                                  |     0.183 |
+|               U0                                                                    |     0.183 |
+|                 i_mult                                                              |     0.183 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.183 |
+|             DSP_17                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_18                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_19                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_2                                                                   |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_20                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_21                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_22                                                                  |     0.181 |
+|               U0                                                                    |     0.181 |
+|                 i_mult                                                              |     0.181 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.181 |
+|             DSP_23                                                                  |     0.183 |
+|               U0                                                                    |     0.183 |
+|                 i_mult                                                              |     0.183 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.183 |
+|             DSP_24                                                                  |     0.182 |
+|               U0                                                                    |     0.182 |
+|                 i_mult                                                              |     0.182 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.182 |
+|             DSP_25                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_26                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_27                                                                  |     0.178 |
+|               U0                                                                    |     0.178 |
+|                 i_mult                                                              |     0.178 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.178 |
+|             DSP_28                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_29                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_3                                                                   |     0.181 |
+|               U0                                                                    |     0.181 |
+|                 i_mult                                                              |     0.181 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.181 |
+|             DSP_30                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_31                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_32                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_33                                                                  |     0.180 |
+|               U0                                                                    |     0.180 |
+|                 i_mult                                                              |     0.180 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.180 |
+|             DSP_34                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_35                                                                  |     0.185 |
+|               U0                                                                    |     0.185 |
+|                 i_mult                                                              |     0.185 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.185 |
+|             DSP_36                                                                  |     0.177 |
+|               U0                                                                    |     0.177 |
+|                 i_mult                                                              |     0.177 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.177 |
+|             DSP_37                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_38                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_39                                                                  |     0.189 |
+|               U0                                                                    |     0.189 |
+|                 i_mult                                                              |     0.189 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.189 |
+|             DSP_4                                                                   |     0.207 |
+|               U0                                                                    |     0.207 |
+|                 i_mult                                                              |     0.207 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.207 |
+|             DSP_40                                                                  |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_41                                                                  |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_42                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_43                                                                  |     0.175 |
+|               U0                                                                    |     0.175 |
+|                 i_mult                                                              |     0.175 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.175 |
+|             DSP_44                                                                  |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_45                                                                  |     0.195 |
+|               U0                                                                    |     0.195 |
+|                 i_mult                                                              |     0.195 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.195 |
+|             DSP_46                                                                  |     0.202 |
+|               U0                                                                    |     0.202 |
+|                 i_mult                                                              |     0.202 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.202 |
+|             DSP_47                                                                  |     0.194 |
+|               U0                                                                    |     0.194 |
+|                 i_mult                                                              |     0.194 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.194 |
+|             DSP_48                                                                  |     0.193 |
+|               U0                                                                    |     0.193 |
+|                 i_mult                                                              |     0.193 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.193 |
+|             DSP_49                                                                  |     0.211 |
+|               U0                                                                    |     0.211 |
+|                 i_mult                                                              |     0.211 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.211 |
+|             DSP_5                                                                   |     0.173 |
+|               U0                                                                    |     0.173 |
+|                 i_mult                                                              |     0.173 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.173 |
+|             DSP_6                                                                   |     0.174 |
+|               U0                                                                    |     0.174 |
+|                 i_mult                                                              |     0.174 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.174 |
+|             DSP_7                                                                   |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_8                                                                   |     0.176 |
+|               U0                                                                    |     0.176 |
+|                 i_mult                                                              |     0.176 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.176 |
+|             DSP_9                                                                   |     0.181 |
+|               U0                                                                    |     0.181 |
+|                 i_mult                                                              |     0.181 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.181 |
+|           Reg_1_1                                                                   |     0.269 |
+|           Reg_1_2                                                                   |     0.290 |
+|           Reg_1_3                                                                   |     0.282 |
+|           Reg_1_4                                                                   |     0.271 |
+|           Reg_1_5                                                                   |     0.265 |
+|           Reg_1_6                                                                   |     0.255 |
+|           Reg_1_7                                                                   |     0.284 |
+|           Reg_2_1                                                                   |     0.242 |
+|           Reg_2_2                                                                   |     0.258 |
+|           Reg_2_3                                                                   |     0.270 |
+|           Reg_2_4                                                                   |     0.265 |
+|           Reg_2_5                                                                   |     0.262 |
+|           Reg_2_6                                                                   |     0.249 |
+|           Reg_2_7                                                                   |     0.283 |
+|           Reg_3_1                                                                   |     0.254 |
+|           Reg_3_2                                                                   |     0.237 |
+|           Reg_3_3                                                                   |     0.283 |
+|           Reg_3_4                                                                   |     0.277 |
+|           Reg_3_5                                                                   |     0.154 |
+|           Reg_3_6                                                                   |     0.170 |
+|           Reg_3_7                                                                   |     0.181 |
+|           Reg_4_1                                                                   |     0.180 |
+|           Reg_4_2                                                                   |     0.166 |
+|           Reg_4_3                                                                   |     0.169 |
+|           Reg_4_4                                                                   |     0.166 |
+|           Reg_4_5                                                                   |     0.206 |
+|           Reg_4_6                                                                   |     0.236 |
+|           Reg_4_7                                                                   |     0.229 |
+|           Reg_5_1                                                                   |     0.222 |
+|           Reg_5_2                                                                   |     0.229 |
+|           Reg_5_3                                                                   |     0.217 |
+|           Reg_5_4                                                                   |     0.248 |
+|           Reg_5_5                                                                   |     0.237 |
+|           Reg_5_6                                                                   |     0.218 |
+|           Reg_5_7                                                                   |     0.250 |
+|           Reg_6_1                                                                   |     0.217 |
+|           Reg_6_2                                                                   |     0.232 |
+|           Reg_6_3                                                                   |     0.298 |
+|           Reg_6_4                                                                   |     0.298 |
+|           Reg_6_5                                                                   |     0.308 |
+|           Reg_6_6                                                                   |     0.271 |
+|           Reg_6_7                                                                   |     0.312 |
+|           Reg_7_1                                                                   |     0.236 |
+|           Reg_7_2                                                                   |     0.258 |
+|           Reg_7_3                                                                   |     0.265 |
+|           Reg_7_4                                                                   |     0.280 |
+|           Reg_7_5                                                                   |     0.336 |
+|           Reg_7_6                                                                   |     0.299 |
+|           Reg_7_7                                                                   |     0.263 |
+|           Tff                                                                       |     6.553 |
+|           divide_blue                                                               |     0.571 |
+|             mult_result                                                             |     0.514 |
+|               U0                                                                    |     0.514 |
+|                 i_mult                                                              |     0.514 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.514 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.011 |
+|           divide_green                                                              |     0.540 |
+|             mult_result                                                             |     0.508 |
+|               U0                                                                    |     0.508 |
+|                 i_mult                                                              |     0.508 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.508 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.009 |
+|           divide_red                                                                |     0.548 |
+|             mult_result                                                             |     0.506 |
+|               U0                                                                    |     0.506 |
+|                 i_mult                                                              |     0.506 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.506 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |     0.005 |
+|           fifo_1                                                                    |     0.384 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.024 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.031 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.024 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.029 |
+|           fifo_2                                                                    |     0.331 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.012 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.012 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.012 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.011 |
+|           fifo_3                                                                    |     0.316 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.011 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.012 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.011 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.012 |
+|           fifo_4                                                                    |     0.331 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.012 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.012 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.012 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.012 |
+|           fifo_5                                                                    |     0.367 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.011 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.013 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.014 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.011 |
+|           fifo_6                                                                    |     0.371 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.011 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.011 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.011 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.011 |
+|           fifo_7                                                                    |     0.305 |
+|             buf_mem_reg_0_7_0_5                                                     |     0.011 |
+|             buf_mem_reg_0_7_12_17                                                   |     0.012 |
+|             buf_mem_reg_0_7_18_23                                                   |     0.011 |
+|             buf_mem_reg_0_7_6_11                                                    |     0.012 |
+|         controlSignals                                                              |     0.773 |
+|           buf_mem_reg_0_63_0_2                                                      |     0.008 |
++-------------------------------------------------------------------------------------+-----------+
+
+

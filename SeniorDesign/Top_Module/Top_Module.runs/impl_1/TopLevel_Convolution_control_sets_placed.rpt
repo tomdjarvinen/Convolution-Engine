@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue Feb 28 16:11:28 2017
+| Date         : Sun Apr 02 13:06:51 2017
 | Host         : DESKTOP-7PO5321 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TopLevel_Convolution_control_sets_placed.rpt
 | Design       : TopLevel_Convolution
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |   122 |
-| Unused register locations in slices containing registers |    36 |
+| Number of unique control sets                            |   123 |
+| Unused register locations in slices containing registers |    42 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,150 +33,151 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            4984 |         1089 |
+| No           | No                    | No                     |            5666 |         1206 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               8 |            8 |
-| Yes          | No                    | No                     |            1176 |          194 |
+| Yes          | No                    | No                     |            1176 |          201 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            1372 |          243 |
+| Yes          | Yes                   | No                     |            1372 |          250 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+------------------+-----------------------------------+------------------+------------------+----------------+
-|   Clock Signal   |           Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+------------------+-----------------------------------+------------------+------------------+----------------+
-|  clk_IBUF_BUFG   | fifo_3/fifo_counter[3]_i_1__1_n_0 | rst_IBUF         |                1 |              4 |
-|  clk_IBUF_BUFG   | fifo_1/fifo_counter[3]_i_1_n_0    | rst_IBUF         |                2 |              4 |
-|  clk_IBUF_BUFG   | fifo_7/fifo_counter[3]_i_1__5_n_0 | rst_IBUF         |                2 |              4 |
-|  clk_IBUF_BUFG   | fifo_5/fifo_counter[3]_i_1__3_n_0 | rst_IBUF         |                1 |              4 |
-|  clk_IBUF_BUFG   | fifo_2/fifo_counter[3]_i_1__0_n_0 | rst_IBUF         |                2 |              4 |
-|  clk_IBUF_BUFG   | fifo_4/fifo_counter[3]_i_1__2_n_0 | rst_IBUF         |                2 |              4 |
-|  clk_IBUF_BUFG   | fifo_6/fifo_counter[3]_i_1__4_n_0 | rst_IBUF         |                1 |              4 |
-|  clk_IBUF_BUFG   |                                   | rst_IBUF         |                8 |              8 |
-|  clk_IBUF_BUFG   | Reg_2_6/inter[23]_i_1__35_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_6/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | fifo_2/buf_out[23]_i_1__0_n_0     | rst_IBUF         |                7 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_7/inter[23]_i_1__41_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | fifo_3/buf_out[23]_i_1__1_n_0     | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_7/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | fifo_4/buf_out[23]_i_1__2_n_0     | rst_IBUF         |                6 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_1/inter[23]_i_1__40_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | fifo_5/buf_out[23]_i_1__3_n_0     | rst_IBUF         |                6 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_6/inter[23]_i_1__21_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | fifo_6/buf_out[23]_i_1__4_n_0     | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_1/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | fifo_7/buf_out[23]_i_1__5_n_0     | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_2/inter[23]_i_1__39_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_1/inter[23]_i_1__47_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_1/write                     | rst_IBUF         |                7 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_3/inter[23]_i_1__38_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_3/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_4/inter[23]_i_1__37_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_4/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_5/inter[23]_i_1__36_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_5/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_2/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_6/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_7/inter[23]_i_1__34_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_2_7/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_1/inter[23]_i_1__33_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_1/write_reg_n_0             | rst_IBUF         |                6 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_2/inter[23]_i_1__32_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_2/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_3/inter[23]_i_1__31_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_3/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_4/inter[23]_i_1__30_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_5/inter[23]_i_1__29_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_5/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_2/inter[23]_i_1__46_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_2/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_6/inter[23]_i_1__28_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_6/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_7/inter[23]_i_1__27_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_3_7/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_1/inter[23]_i_1__26_n_0     |                  |                6 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_1/write_reg_n_0             | rst_IBUF         |                8 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_2/inter[23]_i_1__25_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_2/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_3/inter[23]_i_1__24_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | fifo_1/buf_out[23]_i_1_n_0        | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_3/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_4/inter[23]_i_1__23_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_4/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_5/inter[23]_i_1__22_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_5/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_5/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_6/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_7/inter[23]_i_1__20_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_4_7/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_1/inter[23]_i_1__19_n_0     |                  |                6 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_1/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_3/inter[23]_i_1__45_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_3/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_2/inter[23]_i_1__18_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_2/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_3/inter[23]_i_1__17_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_3/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_4/inter[23]_i_1__16_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_4/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_5/inter[23]_i_1__15_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_5/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_6/inter[23]_i_1__14_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_6/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_7/inter[23]_i_1__13_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_5_7/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_1/inter[23]_i_1__12_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_1/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_2/inter[23]_i_1__11_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_2/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_3/inter[23]_i_1__10_n_0     |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_3/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_4/inter[23]_i_1__9_n_0      |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_4/inter[23]_i_1__44_n_0     |                  |                6 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_4/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_5/inter[23]_i_1__8_n_0      |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_5/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_6/inter[23]_i_1__7_n_0      |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_6/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_7/inter[23]_i_1__6_n_0      |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_6_7/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_1/inter[23]_i_1__5_n_0      |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_1/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_2/inter[23]_i_1__4_n_0      |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_2/write_reg_n_0             | rst_IBUF         |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_3/inter[23]_i_1__3_n_0      |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_3/write_reg_n_0             | rst_IBUF         |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_4/inter[23]_i_1__2_n_0      |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_5/inter[23]_i_1__1_n_0      |                  |                3 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_6/inter[23]_i_1__0_n_0      |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_6/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_7/inter[23]_i_1_n_0         |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_7_7/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_5/inter[23]_i_1__43_n_0     |                  |                5 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_5/write_reg_n_0             | rst_IBUF         |                4 |             24 |
-|  clk_IBUF_BUFG   | Reg_1_6/inter[23]_i_1__42_n_0     |                  |                4 |             24 |
-|  clk_IBUF_BUFG   | fifo_1/p_0_in2_out                |                  |                4 |             32 |
-|  clk_IBUF_BUFG   | fifo_2/p_0_in2_out__0             |                  |                4 |             32 |
-|  clk_IBUF_BUFG   | fifo_3/p_0_in2_out__1             |                  |                4 |             32 |
-|  clk_IBUF_BUFG   | fifo_4/p_0_in2_out__2             |                  |                4 |             32 |
-|  clk_IBUF_BUFG   | fifo_6/p_0_in2_out__4             |                  |                4 |             32 |
-|  clk_IBUF_BUFG   | fifo_7/p_0_in2_out__5             |                  |                4 |             32 |
-|  clk_IBUF_BUFG   | fifo_5/p_0_in2_out__3             |                  |                4 |             32 |
-|  clk_IBUF_BUFG   |                                   |                  |               49 |             91 |
-|  clock_half_BUFG |                                   |                  |             1046 |           4941 |
-+------------------+-----------------------------------+------------------+------------------+----------------+
++-----------------------------+-----------------------------------+------------------+------------------+----------------+
+|         Clock Signal        |           Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-----------------------------+-----------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG              | fifo_5/fifo_counter[3]_i_1__3_n_0 | rst_IBUF         |                2 |              4 |
+|  clk_IBUF_BUFG              | fifo_3/fifo_counter[3]_i_1__1_n_0 | rst_IBUF         |                2 |              4 |
+|  clk_IBUF_BUFG              | fifo_1/fifo_counter[3]_i_1_n_0    | rst_IBUF         |                2 |              4 |
+|  multiply_by_reg[0]_i_2_n_0 |                                   |                  |                2 |              4 |
+|  clk_IBUF_BUFG              | fifo_6/fifo_counter[3]_i_1__4_n_0 | rst_IBUF         |                2 |              4 |
+|  clk_IBUF_BUFG              | fifo_2/fifo_counter[3]_i_1__0_n_0 | rst_IBUF         |                2 |              4 |
+|  clk_IBUF_BUFG              | fifo_4/fifo_counter[3]_i_1__2_n_0 | rst_IBUF         |                1 |              4 |
+|  clk_IBUF_BUFG              | fifo_7/fifo_counter[3]_i_1__5_n_0 | rst_IBUF         |                2 |              4 |
+|  clk_IBUF_BUFG              |                                   | rst_IBUF         |                8 |              8 |
+|  clk_IBUF_BUFG              | fifo_1/buf_out[23]_i_1_n_0        | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_7/inter[23]_i_1__41_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | fifo_2/buf_out[23]_i_1__0_n_0     | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_7/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | fifo_3/buf_out[23]_i_1__1_n_0     | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_1/inter[23]_i_1__40_n_0     |                  |                6 |             24 |
+|  clk_IBUF_BUFG              | fifo_4/buf_out[23]_i_1__2_n_0     | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_1/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | fifo_5/buf_out[23]_i_1__3_n_0     | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_5/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_2/inter[23]_i_1__39_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | fifo_6/buf_out[23]_i_1__4_n_0     | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_2/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | fifo_7/buf_out[23]_i_1__5_n_0     | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_6/inter[23]_i_1__0_n_0      |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_1/inter[23]_i_1__47_n_0     |                  |                7 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_1/write                     | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_3/inter[23]_i_1__38_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_3/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_4/inter[23]_i_1__37_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_5/inter[23]_i_1__36_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_6/inter[23]_i_1__35_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_6/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_7/inter[23]_i_1__34_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_2_7/write_reg_n_0             | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_1/inter[23]_i_1__33_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_1/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_2/inter[23]_i_1__32_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_2/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_3/inter[23]_i_1__31_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_3/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_4/inter[23]_i_1__30_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_5/inter[23]_i_1__29_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_5/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_2/inter[23]_i_1__46_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_2/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_6/inter[23]_i_1__28_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_6/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_7/inter[23]_i_1__27_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_3_7/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_1/inter[23]_i_1__26_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_1/write_reg_n_0             | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_2/inter[23]_i_1__25_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_2/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_3/inter[23]_i_1__24_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_3/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_4/inter[23]_i_1__23_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_5/inter[23]_i_1__22_n_0     |                  |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_5/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_6/inter[23]_i_1__21_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_6/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_7/inter[23]_i_1__20_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_4_7/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_1/inter[23]_i_1__19_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_1/write_reg_n_0             | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_3/inter[23]_i_1__45_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_3/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_2/inter[23]_i_1__18_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_2/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_3/inter[23]_i_1__17_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_3/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_4/inter[23]_i_1__16_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_5/inter[23]_i_1__15_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_5/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_6/inter[23]_i_1__14_n_0     |                  |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_6/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_7/inter[23]_i_1__13_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_5_7/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_1/inter[23]_i_1__12_n_0     |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_1/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_2/inter[23]_i_1__11_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_2/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_3/inter[23]_i_1__10_n_0     |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_3/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_4/inter[23]_i_1__9_n_0      |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_4/inter[23]_i_1__44_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_4/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_5/inter[23]_i_1__8_n_0      |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_6/inter[23]_i_1__7_n_0      |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_6/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_7/inter[23]_i_1__6_n_0      |                  |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_7/write_reg_n_0             | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_1/inter[23]_i_1__5_n_0      |                  |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_1/write_reg_n_0             | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_2/inter[23]_i_1__4_n_0      |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_2/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_3/inter[23]_i_1__3_n_0      |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_3/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_4/inter[23]_i_1__2_n_0      |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_4/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_5/inter[23]_i_1__1_n_0      |                  |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_5/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_6_5/write_reg_n_0             | rst_IBUF         |                4 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_6/write_reg_n_0             | rst_IBUF         |                5 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_7/inter[23]_i_1_n_0         |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_7_7/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_5/inter[23]_i_1__43_n_0     |                  |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_5/write_reg_n_0             | rst_IBUF         |                3 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_6/inter[23]_i_1__42_n_0     |                  |                6 |             24 |
+|  clk_IBUF_BUFG              | Reg_1_6/write_reg_n_0             | rst_IBUF         |                6 |             24 |
+|  clk_IBUF_BUFG              | fifo_1/p_0_in2_out                |                  |                4 |             32 |
+|  clk_IBUF_BUFG              | fifo_2/p_0_in2_out__0             |                  |                4 |             32 |
+|  clk_IBUF_BUFG              | fifo_3/p_0_in2_out__1             |                  |                4 |             32 |
+|  clk_IBUF_BUFG              | fifo_4/p_0_in2_out__2             |                  |                4 |             32 |
+|  clk_IBUF_BUFG              | fifo_5/p_0_in2_out__3             |                  |                4 |             32 |
+|  clk_IBUF_BUFG              | fifo_6/p_0_in2_out__4             |                  |                4 |             32 |
+|  clk_IBUF_BUFG              | fifo_7/p_0_in2_out__5             |                  |                4 |             32 |
+|  clk_IBUF_BUFG              |                                   |                  |               48 |             91 |
+|  clock_half_BUFG            |                                   |                  |             1165 |           5625 |
++-----------------------------+-----------------------------------+------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 4      |                     7 |
+| 4      |                     8 |
 | 8      |                     1 |
 | 16+    |                   114 |
 +--------+-----------------------+

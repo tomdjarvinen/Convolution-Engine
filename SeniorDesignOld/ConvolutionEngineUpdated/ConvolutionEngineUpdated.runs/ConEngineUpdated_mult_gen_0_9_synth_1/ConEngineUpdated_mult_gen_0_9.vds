@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Feb 07 18:20:02 2017
+# Process ID: 9116
+# Current directory: C:/Users/saina/ConvolutionEngineUpdated/ConvolutionEngineUpdated.runs/ConEngineUpdated_mult_gen_0_9_synth_1
+# Command line: vivado.exe -log ConEngineUpdated_mult_gen_0_9.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ConEngineUpdated_mult_gen_0_9.tcl
+# Log file: C:/Users/saina/ConvolutionEngineUpdated/ConvolutionEngineUpdated.runs/ConEngineUpdated_mult_gen_0_9_synth_1/ConEngineUpdated_mult_gen_0_9.vds
+# Journal file: C:/Users/saina/ConvolutionEngineUpdated/ConvolutionEngineUpdated.runs/ConEngineUpdated_mult_gen_0_9_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ConEngineUpdated_mult_gen_0_9.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ConEngineUpdated_mult_gen_0_9, cache-ID = 4d5f24a9963127e4.

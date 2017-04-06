@@ -1,93 +1,220 @@
 #-----------------------------------------------------------
-# Vivado v2016.2 (64-bit)
-# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
-# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Tue Feb 14 13:31:53 2017
-# Process ID: 5988
-# Current directory: F:/SeniorDesign/ConEngine_Verilog
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9076 F:\SeniorDesign\ConEngine_Verilog\ConEngine_Verilog.xpr
-# Log file: F:/SeniorDesign/ConEngine_Verilog/vivado.log
-# Journal file: F:/SeniorDesign/ConEngine_Verilog\vivado.jou
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Mar 07 11:25:30 2017
+# Process ID: 9376
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/ConEngine_Verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8224 C:\Users\saina\Desktop\SeniorDesign\ConEngine_Verilog\ConEngine_Verilog.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/ConEngine_Verilog/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/ConEngine_Verilog\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project F:/SeniorDesign/ConEngine_Verilog/ConEngine_Verilog.xpr
+open_project C:/Users/saina/Desktop/SeniorDesign/ConEngine_Verilog/ConEngine_Verilog.xpr
+INFO: [Project 1-313] Project file moved from 'F:/SeniorDesign/ConEngine_Verilog' since last save.
 Scanning sources...
 Finished scanning sources
-CRITICAL WARNING: [Project 1-505] Unrecognized Option Name DSANumComputeUnits
-CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimRadix
-CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimTimeUnit
-CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimArrayDisplayLimit
-CRITICAL WARNING: [Project 1-505] Unrecognized Option Name XSimTraceLimit
-WARNING: [Project 1-231] Project 'ConEngine_Verilog.xpr' was created with a future version and may or may not perform reliably with this version of Vivado. It has been opened in read-only mode for the protection of unrecognized data. Use 'File | Save Project As...' if you wish to alter a copy of the project.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.2/data/ip'.
-open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 504.531 ; gain = 73.816
-update_compile_order -fileset sources_1
-save_project_as ConEngine F:/SeniorDesign/ConEngine -force
-save_project_as: Time (s): cpu = 00:00:05 ; elapsed = 00:00:39 . Memory (MB): peak = 517.352 ; gain = 12.820
-file mkdir F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 712.082 ; gain = 125.949
+save_project_as ConvolutionEngine_Signed C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed -force
+create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name mult_gen_2
+set_property -dict [list CONFIG.PortAWidth {9} CONFIG.PortBWidth {9} CONFIG.Multiplier_Construction {Use_Mults} CONFIG.OutputWidthHigh {17}] [get_ips mult_gen_2]
+generate_target {instantiation_template} [get_files c:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'mult_gen_2'...
+generate_target all [get_files  c:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mult_gen_2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'mult_gen_2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'mult_gen_2'...
+export_ip_user_files -of_objects [get_files c:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci]
+launch_runs -jobs 2 mult_gen_2_synth_1
+[Tue Mar 07 11:45:39 2017] Launched mult_gen_2_synth_1...
+Run output will be captured here: C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.runs/mult_gen_2_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 743.402 ; gain = 0.000
+INFO: [Vivado 12-4357] Exporting simulation files for 'mult_gen_2'... please wait for 'mult_gen_2_synth_1' run to finish...
+wait_on_run mult_gen_2_synth_1
+[Tue Mar 07 11:45:39 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:45:44 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:45:49 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:45:54 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:46:04 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:46:14 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:46:24 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:46:35 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:46:55 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:47:15 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:47:35 2017] Waiting for mult_gen_2_synth_1 to finish...
+[Tue Mar 07 11:47:50 2017] mult_gen_2_synth_1 finished
+wait_on_run: Time (s): cpu = 00:00:03 ; elapsed = 00:02:10 . Memory (MB): peak = 748.527 ; gain = 5.125
+export_simulation -of_objects [get_files c:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2.xci] -directory C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.ip_user_files -ipstatic_source_dir C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.cache/compile_simlib/modelsim} {questa=C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.cache/compile_simlib/questa} {riviera=C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.cache/compile_simlib/riviera} {activehdl=C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+file mkdir C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine_tb.v w ]
-add_files -fileset sim_1 F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine_tb.v
-update_compile_order -fileset sim_1
-remove_files -fileset sim_1 F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine_tb.v
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v w ]
-add_files -fileset sim_1 F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v
-update_compile_order -fileset sim_1
-ERROR: [Common 17-180] Spawn failed: No error
-update_compile_order -fileset sim_1
+close [ open C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v w ]
+add_files -fileset sim_1 C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v
 update_compile_order -fileset sim_1
 launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine1_tb' in fileset 'sim_1'...
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
-"xvlog -m64 --relax -prj ConvolutionEngine1_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionEngine
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionEngine1_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
 INFO: [VRFC 10-311] analyzing module glbl
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 568.598 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '8' seconds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2458] undeclared symbol clock, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:224]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register clock is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:341]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register clock is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:341]
+ERROR: [VRFC 10-1040] module ConvolutionEngine_tb ignored due to previous errors [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 807.922 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2458] undeclared symbol clock, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:224]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register clock is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:230]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register clock is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:230]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register clock is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:341]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register clock is not permitted, left-hand side should be reg/integer/time/genvar [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:341]
+ERROR: [VRFC 10-1040] module ConvolutionEngine_tb ignored due to previous errors [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+ERROR: [VRFC 10-91] clock is not declared [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:230]
+ERROR: [VRFC 10-1040] module ConvolutionEngine_tb ignored due to previous errors [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
-Vivado Simulator 2016.2
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 97f7d8151005425d869a19638ac8c974 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ConvolutionEngine1_tb_behav xil_defaultlib.ConvolutionEngine1_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
 Compiling module xil_defaultlib.ConvolutionEngine
-Compiling module xil_defaultlib.ConvolutionEngine1_tb
+Compiling module xil_defaultlib.ConvolutionEngine_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot ConvolutionEngine1_tb_behav
+Built simulation snapshot ConvolutionEngine_tb_behav
 
-****** Webtalk v2016.2 (64-bit)
-  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
-  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav/xsim.dir/ConvolutionEngine1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Feb 14 14:30:28 2017...
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 568.598 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '17' seconds
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:21:39 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:21:39 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 807.922 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '16' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "ConvolutionEngine1_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine1_tb} -tclbatch {ConvolutionEngine1_tb.tcl} -log {simulate.log}"
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.2
+Vivado Simulator 2016.3
 Time resolution is 1 ps
-source ConvolutionEngine1_tb.tcl
+source ConvolutionEngine_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -98,62 +225,78 @@ source ConvolutionEngine1_tb.tcl
 #   }
 # }
 # run 1000ns
-xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 603.852 ; gain = 35.254
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine1_tb_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:43 . Memory (MB): peak = 604.414 ; gain = 35.816
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:22 . Memory (MB): peak = 816.262 ; gain = 8.340
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 659.598 ; gain = 0.000
 launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine1_tb' in fileset 'sim_1'...
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
-"xvlog -m64 --relax -prj ConvolutionEngine1_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionEngine
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionEngine1_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
 INFO: [VRFC 10-311] analyzing module glbl
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 659.598 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '14' seconds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
-Vivado Simulator 2016.2
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 97f7d8151005425d869a19638ac8c974 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ConvolutionEngine1_tb_behav xil_defaultlib.ConvolutionEngine1_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
 Compiling module xil_defaultlib.ConvolutionEngine
-Compiling module xil_defaultlib.ConvolutionEngine1_tb
+Compiling module xil_defaultlib.ConvolutionEngine_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot ConvolutionEngine1_tb_behav
+Built simulation snapshot ConvolutionEngine_tb_behav
 
-****** Webtalk v2016.2 (64-bit)
-  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
-  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav/xsim.dir/ConvolutionEngine1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Feb 14 14:33:13 2017...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:20 . Memory (MB): peak = 659.598 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '19' seconds
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:28:29 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:28:29 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 880.109 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "ConvolutionEngine1_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine1_tb} -tclbatch {ConvolutionEngine1_tb.tcl} -log {simulate.log}"
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.2
+Vivado Simulator 2016.3
 Time resolution is 1 ps
-source ConvolutionEngine1_tb.tcl
+source ConvolutionEngine_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -164,62 +307,78 @@ source ConvolutionEngine1_tb.tcl
 #   }
 # }
 # run 1000ns
-xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 659.598 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine1_tb_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 659.598 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 880.109 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 659.598 ; gain = 0.000
 launch_simulation
-INFO: [USF-XSim-27] Simulation object is 'sim_1'
-INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine1_tb' in fileset 'sim_1'...
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
-"xvlog -m64 --relax -prj ConvolutionEngine1_tb_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionEngine
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionEngine1_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
 INFO: [VRFC 10-311] analyzing module glbl
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 659.598 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '13' seconds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
-Vivado Simulator 2016.2
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 97f7d8151005425d869a19638ac8c974 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ConvolutionEngine1_tb_behav xil_defaultlib.ConvolutionEngine1_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
 Compiling module xil_defaultlib.ConvolutionEngine
-Compiling module xil_defaultlib.ConvolutionEngine1_tb
+Compiling module xil_defaultlib.ConvolutionEngine_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot ConvolutionEngine1_tb_behav
+Built simulation snapshot ConvolutionEngine_tb_behav
 
-****** Webtalk v2016.2 (64-bit)
-  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
-  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
     ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 
-source F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav/xsim.dir/ConvolutionEngine1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Feb 14 14:37:02 2017...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:25 . Memory (MB): peak = 659.598 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '25' seconds
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:30:19 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:30:19 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 880.109 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/SeniorDesign/ConEngine/ConEngine.sim/sim_1/behav'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "ConvolutionEngine1_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine1_tb} -tclbatch {ConvolutionEngine1_tb.tcl} -log {simulate.log}"
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.2
+Vivado Simulator 2016.3
 Time resolution is 1 ps
-source ConvolutionEngine1_tb.tcl
+source ConvolutionEngine_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -230,14 +389,1156 @@ source ConvolutionEngine1_tb.tcl
 #   }
 # }
 # run 1000ns
-xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 659.598 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine1_tb_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:01:10 . Memory (MB): peak = 659.598 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 880.109 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 659.598 ; gain = 0.000
-save_project_as ConvolutionEngine {F:/SeniorDesign/Final Code/ConvolutionEngine} -force
-save_project_as: Time (s): cpu = 00:00:02 ; elapsed = 00:00:52 . Memory (MB): peak = 659.598 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:31:27 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:31:27 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 880.109 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 880.109 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:32:21 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:32:21 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 880.109 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 880.109 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:33:14 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:33:14 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 896.387 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 896.387 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:34:18 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:34:18 2017...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 916.070 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 916.070 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:40:47 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 932.711 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 932.711 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:42:17 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:42:17 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 932.711 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 932.711 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:45:27 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:45:27 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 932.711 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 932.711 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:47:04 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 932.711 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 932.711 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:48:27 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:48:27 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 939.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 939.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:49:31 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:49:31 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 939.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 939.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 12:58:27 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 12:58:27 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 939.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 939.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 13:05:59 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 13:05:59 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 939.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 939.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 13:09:46 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 13:09:46 2017...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 939.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 939.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2016.3/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-37] Inspecting design source files for 'ConvolutionEngine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+"xvlog -m64 --relax -prj ConvolutionEngine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/ip/mult_gen_2/mult_gen_2_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult_gen_2
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12
+INFO: [VRFC 10-311] analyzing module mult_gen_2_dsp
+INFO: [VRFC 10-311] analyzing module mult_gen_2_mult_gen_v12_0_12_viv
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine
+INFO: [VRFC 10-2458] undeclared symbol DSP_Out11, assumed default net type wire [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sim_1/new/ConvolutionEngine_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionEngine_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/glbl.v:6]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto a82b5ce37ce849fda63fe3de1bc34fde --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot ConvolutionEngine_tb_behav xil_defaultlib.ConvolutionEngine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port P [C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.srcs/sources_1/new/ConvolutionEngine.v:236]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.DSP48E1(ACASCREG=0,ALUMODEREG=0,...
+Compiling module xil_defaultlib.mult_gen_2_dsp
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12_viv
+Compiling module xil_defaultlib.mult_gen_2_mult_gen_v12_0_12
+Compiling module xil_defaultlib.mult_gen_2
+Compiling module xil_defaultlib.ConvolutionEngine
+Compiling module xil_defaultlib.ConvolutionEngine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ConvolutionEngine_tb_behav
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav/xsim.dir/ConvolutionEngine_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Mar 07 13:14:52 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 07 13:14:52 2017...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 958.219 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/saina/Desktop/SeniorDesign/ConvolutionEngine_Signed/ConvolutionEngine_Signed.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ConvolutionEngine_tb_behav -key {Behavioral:sim_1:Functional:ConvolutionEngine_tb} -tclbatch {ConvolutionEngine_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.3
+Time resolution is 1 ps
+source ConvolutionEngine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ConvolutionEngine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 958.219 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 14 15:15:59 2017...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 07 13:18:04 2017...

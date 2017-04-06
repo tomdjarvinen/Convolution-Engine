@@ -1,0 +1,16 @@
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/TFlipFlop.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/Divide.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/Reg.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/FifoTesting.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/ConvolutionEngine.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/FifoBuffer2.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/hdl/myip_v1_0_S00_AXIS.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/hdl/myip_v1_0_M00_AXIS.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/src/TopLevel_Convolution.v" 
+verilog xil_defaultlib "../../../bd/design_1/ipshared/ec09/hdl/myip_v1_0.v" 
+verilog xil_defaultlib "../../../bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.v" 
+verilog xil_defaultlib "../../../bd/design_1/hdl/design_1.v" 
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

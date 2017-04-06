@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Mar 26 10:47:35 2017
+# Process ID: 4844
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14016 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/saina/Desktop/Division/Division.srcs/sources_1/new/Divide.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 734.684 ; gain = 123.996
+add_files -norecurse -scan_for_includes C:/Users/saina/Desktop/SeniorDesign/Division/Division.srcs/sources_1/new/Divide.v
+WARNING: [filemgmt 56-12] File 'C:/Users/saina/Desktop/SeniorDesign/Division/Division.srcs/sources_1/new/Divide.v' cannot be added to the project because it already exists in the project, skipping this file
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 26 10:50:42 2017...

@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Feb 21 19:12:54 2017
+# Process ID: 7040
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10660 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
+launch_simulation -mode post-implementation -type timing
+source FifoTesting_tb.tcl
+run 5000 ns
+save_wave_config {C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
+set_property xsim.view C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg [get_filesets sim_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+close_sim
+close_design
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
+source FifoTesting_tb.tcl
+run 5000 ns
+close_sim

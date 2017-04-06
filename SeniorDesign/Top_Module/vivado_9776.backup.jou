@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sun Apr 02 12:38:46 2017
+# Process ID: 9776
+# Current directory: C:/Users/saina/Desktop/SeniorDesign/Top_Module
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8004 C:\Users\saina\Desktop\SeniorDesign\Top_Module\Top_Module.xpr
+# Log file: C:/Users/saina/Desktop/SeniorDesign/Top_Module/vivado.log
+# Journal file: C:/Users/saina/Desktop/SeniorDesign/Top_Module\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/saina/Desktop/SeniorDesign/Top_Module/Top_Module.xpr
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
+source FifoTesting_tb.tcl
+run all
+close_sim
+add_files -norecurse -scan_for_includes C:/Users/saina/Desktop/SeniorDesign/Division/Division.srcs/sources_1/new/Divide.v
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing
+open_wave_config C:/Users/saina/Desktop/SeniorDesign/Top_Module/FifoTesting_tb_time_impl.wcfg
+source FifoTesting_tb.tcl
+close_sim

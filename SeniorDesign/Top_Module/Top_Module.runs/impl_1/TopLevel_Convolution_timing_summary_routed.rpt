@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Tue Feb 28 16:12:20 2017
+| Date         : Sun Apr 02 13:07:42 2017
 | Host         : DESKTOP-7PO5321 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file TopLevel_Convolution_timing_summary_routed.rpt -rpx TopLevel_Convolution_timing_summary_routed.rpx
 | Design       : TopLevel_Convolution
@@ -54,7 +54,13 @@ Table of Contents
 --------------------
  There are 2871 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 5088 register/latch pins with no clock driven by root clock pin: Tff/out_reg/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: kernel_sel[0] (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: kernel_sel[1] (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: kernel_sel[2] (HIGH)
+
+ There are 5775 register/latch pins with no clock driven by root clock pin: Tff/out_reg/Q (HIGH)
 
 
 2. checking constant_clock
@@ -69,21 +75,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 14932 pins that are not constrained for maximum delay. (HIGH)
+ There are 14972 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 33 input ports with no input delay specified. (HIGH)
+ There are 28 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 66 ports with no output delay specified. (HIGH)
+ There are 24 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

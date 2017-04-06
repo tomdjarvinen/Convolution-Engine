@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Tue Feb 14 13:31:53 2017
+# Process ID: 5988
+# Current directory: F:/SeniorDesign/ConEngine_Verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9076 F:\SeniorDesign\ConEngine_Verilog\ConEngine_Verilog.xpr
+# Log file: F:/SeniorDesign/ConEngine_Verilog/vivado.log
+# Journal file: F:/SeniorDesign/ConEngine_Verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/SeniorDesign/ConEngine_Verilog/ConEngine_Verilog.xpr
+update_compile_order -fileset sources_1
+save_project_as ConEngine F:/SeniorDesign/ConEngine -force
+file mkdir F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine_tb.v w ]
+add_files -fileset sim_1 F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine_tb.v
+update_compile_order -fileset sim_1
+remove_files -fileset sim_1 F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine_tb.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v w ]
+add_files -fileset sim_1 F:/SeniorDesign/ConEngine/ConEngine.srcs/sim_1/new/ConvolutionEngine1_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source ConvolutionEngine1_tb.tcl
+close_sim
+launch_simulation
+source ConvolutionEngine1_tb.tcl
+close_sim
+launch_simulation
+source ConvolutionEngine1_tb.tcl
+close_sim
+save_project_as ConvolutionEngine {F:/SeniorDesign/Final Code/ConvolutionEngine} -force

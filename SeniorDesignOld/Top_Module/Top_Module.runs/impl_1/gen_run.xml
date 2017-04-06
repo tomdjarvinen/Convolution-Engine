@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1488319824">
+  <File Type="PWROPT-DRC" Name="TopLevel_Convolution_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="TopLevel_Convolution_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="TopLevel_Convolution_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="TopLevel_Convolution_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="TopLevel_Convolution.tcl"/>
+  <File Type="OPT-HWDEF" Name="TopLevel_Convolution.hwdef"/>
+  <File Type="RDI-RDI" Name="TopLevel_Convolution.vdi"/>
+  <File Type="OPT-DCP" Name="TopLevel_Convolution_opt.dcp"/>
+  <File Type="OPT-DRC" Name="TopLevel_Convolution_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="TopLevel_Convolution_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="TopLevel_Convolution_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="TopLevel_Convolution_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="TopLevel_Convolution_placed.dcp"/>
+  <File Type="PLACE-IO" Name="TopLevel_Convolution_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="TopLevel_Convolution_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="TopLevel_Convolution_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="TopLevel_Convolution_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="TopLevel_Convolution_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="TopLevel_Convolution_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="TopLevel_Convolution_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="TopLevel_Convolution_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="TopLevel_Convolution_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="TopLevel_Convolution_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="TopLevel_Convolution_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="TopLevel_Convolution_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="TopLevel_Convolution_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="TopLevel_Convolution_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="TopLevel_Convolution_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="TopLevel_Convolution_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="TopLevel_Convolution_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="TopLevel_Convolution_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="TopLevel_Convolution.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="TopLevel_Convolution_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="TopLevel_Convolution.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="TopLevel_Convolution_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="TopLevel_Convolution.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="TopLevel_Convolution_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="TopLevel_Convolution.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="TopLevel_Convolution_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="TopLevel_Convolution_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="TopLevel_Convolution_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="TopLevel_Convolution_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="TopLevel_Convolution_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="TopLevel_Convolution_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="TopLevel_Convolution_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="TopLevel_Convolution_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="TopLevel_Convolution_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="TopLevel_Convolution_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="TopLevel_Convolution_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="TopLevel_Convolution_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="TopLevel_Convolution_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="TopLevel_Convolution_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="TopLevel_Convolution_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="TopLevel_Convolution.bit"/>
+  <File Type="BITSTR-RBT" Name="TopLevel_Convolution.rbt"/>
+  <File Type="BITSTR-NKY" Name="TopLevel_Convolution.nky"/>
+  <File Type="BITSTR-BMM" Name="TopLevel_Convolution_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="TopLevel_Convolution.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="TopLevel_Convolution.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../T_Flip_Flop/T_Flip_Flop.srcs/sources_1/new/TFlipFlop.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Register_Slices/Register_Slices.srcs/sources_1/new/Reg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Final_FifoBuffers/Fifo_Buffers.srcs/sources_1/new/FifoTesting.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ConEngine_Verilog/ConEngine_Verilog.srcs/sources_1/new/ConvolutionEngine.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TopLevel_Convolution.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../sxm140630/Desktop/TopModule_ConvolutionEngine/TopModule_ConvolutionEngine.srcs/sources_1/new/TopLevel_Convolution.v"/>
+        <Attr Name="ImportTime" Val="1487442431"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/mult_gen_1/mult_gen_1.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="TopLevel_Convolution"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="mult_gen_2"/>
+</GenRun>
